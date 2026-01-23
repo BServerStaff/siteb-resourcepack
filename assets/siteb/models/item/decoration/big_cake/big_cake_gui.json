@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "siteb:item/decoration/big_cake/big_cake_gui"
+	}
+}

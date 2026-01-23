@@ -1,0 +1,79 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:writable_book_content",
+		"fallback": {
+			"type": "minecraft:model",
+			"model": "minecraft:item/writable_book"
+		},
+    "cases": [
+      {
+        "when": {
+          "pages": [{"raw": "painting\ndino_bath" }]
+        },
+				"model": {
+					"type": "minecraft:select",
+					"property": "minecraft:display_context",
+					"fallback": {
+						"type": "minecraft:model",
+						"model": "siteb:item/decoration/paintings/1x2/dino_bath"
+					},
+					"cases": [
+						{
+							"when": ["gui", "ground"],
+							"model": {
+								"type": "minecraft:model",
+								"model": "siteb:item/decoration/paintings/painting_gui"
+							}
+						}
+					]
+				}
+      },
+			{
+				"when": {
+					"pages": [{"raw": "painting\ntechno_pond" }]
+				},
+				"model": {
+					"type": "minecraft:select",
+					"property": "minecraft:display_context",
+					"fallback": {
+						"type": "minecraft:model",
+						"model": "siteb:item/decoration/paintings/3x2/techno_pond"
+					},
+					"cases": [
+						{
+							"when": ["gui", "ground"],
+							"model": {
+								"type": "minecraft:model",
+								"model": "siteb:item/decoration/paintings/painting_gui"
+							}
+						}
+					]
+				}
+			},
+			{
+				"when": {
+					"pages": [{"raw": "big_cake" }]
+				},
+				"model": {
+					"type": "minecraft:select",
+					"property": "minecraft:display_context",
+					"fallback": {
+						"type": "minecraft:model",
+						"model": "siteb:item/decoration/big_cake/big_cake"
+					},
+					"cases": [
+						{
+							"when": ["gui", "ground"],
+							"model": {
+								"type": "minecraft:model",
+								"model": "siteb:item/decoration/big_cake/big_cake_gui"
+							}
+						}
+					]
+				}
+			}
+		]
+  }
+}

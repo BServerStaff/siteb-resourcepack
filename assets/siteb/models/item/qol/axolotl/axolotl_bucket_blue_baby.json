@@ -1,0 +1,6 @@
+{
+    "parent": "siteb:item/qol/axolotl/axolotl_bucket_blue",
+    "textures": {
+        "layer0": "siteb:item/qol/axolotl/axolotl_bucket_blue_baby"
+    }
+}

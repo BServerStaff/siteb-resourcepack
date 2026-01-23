@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "siteb:item/qol/salmon/salmon_bucket_large"
+  }
+}

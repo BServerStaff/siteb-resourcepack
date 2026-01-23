@@ -1,0 +1,8 @@
+{
+	"format_version": "1.21.11",
+		"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "siteb:item/qol/axolotl/axolotl_bucket_gold"
+	},
+	"display": {}
+}

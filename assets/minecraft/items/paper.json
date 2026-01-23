@@ -1,0 +1,46 @@
+{
+	"model": {
+		"type": "minecraft:select",
+		"property": "minecraft:component",
+		"component": "minecraft:custom_name",
+		"fallback": {
+			"type": "minecraft:model",
+			"model": "minecraft:item/paper"
+		},
+		"cases": [
+			{
+				"when": {
+					"text": "",
+					"extra": [
+						{
+							"text": "Vote Note",
+							"color": "aqua",
+							"italic": false,
+							"underlined": false,
+							"bold": false,
+							"obfuscated": false,
+							"strikethrough": false
+						}
+					]
+				},
+				"model": {
+					"type": "minecraft:select",
+					"property": "minecraft:display_context",
+					"fallback": {
+						"type": "minecraft:model",
+						"model": "siteb:item/qol/votenote/votenote"
+					},
+					"cases": [
+						{
+							"when": ["gui", "ground"],
+							"model": {
+								"type": "minecraft:model",
+								"model": "siteb:item/qol/votenote/votenote_gui"
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}

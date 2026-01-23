@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "siteb:item/consumables/food/golden_potato"
+  }
+}

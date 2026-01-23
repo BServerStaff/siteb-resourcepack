@@ -1,0 +1,28 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:custom_name",
+    "cases": [
+      {
+        "when": "Flag",
+        "model": {
+          "type": "minecraft:special",
+          "model": {
+            "type": "minecraft:banner",
+            "color": "orange"
+          },
+          "base": "siteb:item/decoration/banner/flag_banner"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:special",
+      "model": {
+        "type": "minecraft:banner",
+        "color": "orange"
+      },
+      "base": "minecraft:item/template_banner"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+	"model": {
+		"type": "minecraft:select",
+		"property": "minecraft:component",
+		"component": "minecraft:custom_name",
+		"fallback": {
+			"type": "minecraft:model",
+			"model": "minecraft:item/golden_carrot"
+		},
+		"cases": [
+			{
+				"when": "Banana",
+				"model": {
+					"type": "minecraft:select",
+					"property": "minecraft:display_context",
+					"cases": [
+						{
+							"when": ["gui", "ground"],
+							"model": {
+								"type": "minecraft:model",
+								"model": "siteb:item/consumables/food/banana/banana_gui"
+							}
+						}
+					],
+					"fallback": {
+						"type": "minecraft:condition",
+						"property": "minecraft:using_item",
+						"on_true": {
+							"type": "minecraft:model",
+							"model": "siteb:item/consumables/food/banana/banana_eating"
+						},
+						"on_false": {
+							"type": "minecraft:model",
+							"model": "siteb:item/consumables/food/banana/banana"
+						}
+					}
+				}
+			},
+			{
+				"when": "Golden Potato",
+				"model": {
+					"type": "minecraft:model",
+					"model": "siteb:item/consumables/food/golden_potato"
+				}
+			}
+		]
+	}
+}

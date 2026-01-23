@@ -1,0 +1,7 @@
+{
+	"format_version": "1.21.6",
+		"parent": "siteb:item/decoration/presents/small_gift",
+	"textures": {
+		"particle": "siteb:item/decoration/presents/yellow_gift"
+	}
+}
