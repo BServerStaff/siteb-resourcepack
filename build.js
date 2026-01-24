@@ -8,6 +8,7 @@
 const fs = require("fs");
 const path = require("path");
 const { spawnSync } = require("child_process");
+const crypto = require("crypto");
 
 const [, , srcArg, outArg, zipArg] = process.argv;
 
@@ -88,8 +89,23 @@ function zipFolder() {
 	}
 }
 
+function writeSha1(zipPath) {
+	const hash = crypto.createHash("sha1");
+	const data = fs.readFileSync(zipPath);
+	hash.update(data);
+	const sha1 = hash.digest("hex");
+
+	const PROJECT_ROOT = process.cwd();
+	const outFile = path.join(PROJECT_ROOT, "sha1.txt");
+	fs.writeFileSync(outFile, sha1 + "\n", "utf8");
+
+	console.log(`SHA-1: ${sha1}`);
+	console.log(`Written to: ${outFile}`);
+}
+
 ensureDir(OUT);
 walk(SRC);
 zipFolder();
+writeSha1(ZIP);
 
 console.log(`Done.\nOutput folder: ${OUT}\nZip file: ${ZIP}`);
