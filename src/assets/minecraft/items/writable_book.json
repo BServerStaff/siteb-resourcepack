@@ -10,7 +10,7 @@
     "cases": [
       {
         "when": {
-          "pages": [{"raw": "painting\ndino_bath" }]
+          "pages": [{"raw": "painting\nDino Bath" }]
         },
 				"model": {
 					"type": "minecraft:select",
@@ -32,7 +32,7 @@
       },
 			{
 				"when": {
-					"pages": [{"raw": "painting\ntechno_pond" }]
+					"pages": [{"raw": "painting\nTechno Pond" }]
 				},
 				"model": {
 					"type": "minecraft:select",
@@ -54,7 +54,7 @@
 			},
 			{
 				"when": {
-					"pages": [{"raw": "big_cake" }]
+					"pages": [{"raw": "Big Cake" }]
 				},
 				"model": {
 					"type": "minecraft:select",
