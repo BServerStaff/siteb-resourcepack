@@ -26,6 +26,44 @@
           "model": "siteb:item/decoration/rings/aero_engagment_ring"
         }
       },
+			{
+				"when": [
+					[
+						{
+							"text": "",
+							"extra": [
+								{
+									"text": "ʙɪɢɢᴇꜱᴛ ᴄᴀᴛᴄʜ ꜰᴏʀ ᴛʜᴇ ʙɪɢɢᴇꜱᴛ ᴄʜᴀᴍᴘ",
+									"color": "#7B819F",
+									"bold": false,
+									"italic": true,
+									"underlined": false,
+									"strikethrough": false,
+									"obfuscated": false
+								}
+							]
+						},
+						{
+							"text": "",
+							"extra": [
+								{
+									"text": "\"𝙏𝙖𝙠𝙚 𝙢𝙚 𝙩𝙤 𝙩𝙝𝙚 𝙧𝙞𝙫𝙚𝙧, 𝘿𝙧𝙤𝙥 𝙢𝙚 𝙞𝙣 𝙩𝙝𝙚 𝙬𝙖𝙩𝙚𝙧\"",
+									"color": "#7B9F90",
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"obfuscated": false
+								}
+							]
+						}
+					]
+				],
+				"model": {
+					"type": "minecraft:model",
+					"model": "siteb:item/decoration/trophies/fishtrophy"
+				}
+			},
       {
         "when": [
           {
@@ -906,7 +944,7 @@
             "model": "minecraft:item/clock_00"
           }
         }
-      ],
+			],
       "fallback": {
         "type": "minecraft:select",
         "property": "minecraft:custom_model_data",
