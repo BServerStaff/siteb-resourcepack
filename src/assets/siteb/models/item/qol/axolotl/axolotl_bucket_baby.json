@@ -1,1 +1,6 @@
-{"parent":"siteb:item/qol/axolotl/axolotl_bucket_wild","textures":{"layer0":"siteb:item/qol/axolotl/axolotl_bucket_baby"}}
+{
+    "parent": "siteb:item/qol/axolotl/axolotl_bucket_wild",
+    "textures": {
+        "layer0": "siteb:item/qol/axolotl/axolotl_bucket_baby"
+    }
+}

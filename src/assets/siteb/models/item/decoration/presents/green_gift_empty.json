@@ -1,1 +1,8 @@
-{"format_version":"1.21.6","parent":"siteb:item/decoration/presents/small_gift_empty","textures":{"particle":"siteb:item/decoration/presents/green_gift"},"display":{}}
+{
+	"format_version": "1.21.6",
+		"parent": "siteb:item/decoration/presents/small_gift_empty",
+	"textures": {
+		"particle": "siteb:item/decoration/presents/green_gift"
+	},
+	"display": {}
+}

@@ -1,1 +1,42 @@
-{"model":{"type":"minecraft:select","property":"minecraft:component","component":"minecraft:custom_name","fallback":{"type":"minecraft:model","model":"minecraft:item/mace"},"cases":[{"when":{"text":"","extra":[{"text":"☠ Ban Hammer","color":"red","italic":false}]},"model":{"type":"minecraft:select","property":"minecraft:display_context","fallback":{"type":"minecraft:model","model":"siteb:item/equipment/mace/ban_hammer"},"cases":[{"when":["gui","ground"],"model":{"type":"minecraft:model","model":"siteb:item/equipment/mace/ban_hammer_gui"}}]}}]}}
+{
+	"model": {
+		"type": "minecraft:select",
+		"property": "minecraft:component",
+		"component": "minecraft:custom_name",
+		"fallback": {
+			"type": "minecraft:model",
+			"model": "minecraft:item/mace"
+		},
+		"cases": [
+			{
+				"when": {
+					"text": "",
+					"extra": [
+						{
+							"text": "☠ Ban Hammer",
+							"color": "red",
+							"italic": false
+						}
+					]
+				},
+				"model": {
+					"type": "minecraft:select",
+					"property": "minecraft:display_context",
+					"fallback": {
+						"type": "minecraft:model",
+						"model": "siteb:item/equipment/mace/ban_hammer"
+					},
+					"cases": [
+						{
+							"when": ["gui", "ground"],
+							"model": {
+								"type": "minecraft:model",
+								"model": "siteb:item/equipment/mace/ban_hammer_gui"
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}

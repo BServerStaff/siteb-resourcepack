@@ -1,1 +1,6 @@
-{"parent":"minecraft:item/generated","textures":{"layer0":"siteb:item/decoration/paintings/painting_gui"}}
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "siteb:item/decoration/paintings/painting_gui"
+	}
+}

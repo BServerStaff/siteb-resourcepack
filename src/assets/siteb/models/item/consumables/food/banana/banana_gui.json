@@ -1,1 +1,8 @@
-{"format_version":"1.21.11","parent":"item/generated","textures":{"layer0":"siteb:item/consumables/food/banana/banana_gui","particle":"siteb:item/consumables/food/banana/banana"}}
+{
+	"format_version": "1.21.11",
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "siteb:item/consumables/food/banana/banana_gui",
+		"particle": "siteb:item/consumables/food/banana/banana"
+	}
+}

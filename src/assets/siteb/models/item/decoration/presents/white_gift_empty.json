@@ -1,1 +1,6 @@
-{"parent":"siteb:item/decoration/presents/small_gift_empty","textures":{"particle":"siteb:item/decoration/presents/white_gift"}}
+{
+    "parent": "siteb:item/decoration/presents/small_gift_empty",
+        "textures": {
+        "particle": "siteb:item/decoration/presents/white_gift"
+    }
+}

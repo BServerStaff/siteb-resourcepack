@@ -1,1 +1,6 @@
-{"parent":"minecraft:item/generated","textures":{"layer0":"siteb:item/qol/tropical_fish/base_a"}}
+{
+    "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "siteb:item/qol/tropical_fish/base_a"
+  }
+}
