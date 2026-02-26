@@ -148,8 +148,21 @@
           }
         ],
         "model": {
-          "type": "minecraft:model",
-          "model": "siteb:item/consumables/food/banana/banana"
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": "head",
+              "model": {
+                "type": "minecraft:model",
+                "model": "siteb:item/consumables/food/banana/banana_eating"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "siteb:item/consumables/food/banana/banana"
+          }
         }
       }
     ],

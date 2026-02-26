@@ -1,0 +1,8 @@
+{
+    "parent": "siteb:item/decoration/paintings/1x1/poster/frop_skin_poster",
+    "credit": "Made by FropDrop",
+    "textures": {
+        "0": "siteb:item/decoration/paintings/1x1/frop_shop_poster/sky_skin",
+        "particle": "siteb:item/decoration/paintings/1x1/frop_shop_poster/sky_skin"
+    }
+}

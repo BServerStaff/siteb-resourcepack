@@ -1099,6 +1099,411 @@
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
             "tints": [{"type": "constant","value": 16440419}]
           }
+        },
+        {
+          "when": "Black Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 3618118}]
+          }
+        },
+        {
+          "when": "Blue Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 4545214}]
+          }
+        },
+        {
+          "when": "Brown Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 13600856}]
+          }
+        },
+        {
+          "when": "Cyan Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 2795938}]
+          }
+        },
+        {
+          "when": "Gray Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 7368816}]
+          }
+        },
+        {
+          "when": "Green Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 7308061}]
+          }
+        },
+        {
+          "when": "Light Blue Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 3387597}]
+          }
+        },
+        {
+          "when": "Light Gray Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 10921638}]
+          }
+        },
+        {
+          "when": "Lime Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 10143537}]
+          }
+        },
+        {
+          "when": "Magenta Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 13588901}]
+          }
+        },
+        {
+          "when": "Orange Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 16357420}]
+          }
+        },
+        {
+          "when": "Pink Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 15699371}]
+          }
+        },
+        {
+          "when": "Purple Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 11028941}]
+          }
+        },
+        {
+          "when": "Red Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 14166827}]
+          }
+        },
+        {
+          "when": "White Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 15395562}]
+          }
+        },
+        {
+          "when": "Yellow Top Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/top_hat/top_hat",
+            "tints": [{"type": "constant","value": 16440419}]
+          }
+        },
+        {
+          "when": "Black Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 3618118}]
+          }
+        },
+        {
+          "when": "Blue Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 4545214}]
+          }
+        },
+        {
+          "when": "Brown Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 13600856}]
+          }
+        },
+        {
+          "when": "Cyan Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 2795938}]
+          }
+        },
+        {
+          "when": "Gray Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 7368816}]
+          }
+        },
+        {
+          "when": "Green Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 7308061}]
+          }
+        },
+        {
+          "when": "Light Blue Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 3387597}]
+          }
+        },
+        {
+          "when": "Light Gray Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 10921638}]
+          }
+        },
+        {
+          "when": "Lime Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 10143537}]
+          }
+        },
+        {
+          "when": "Magenta Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 13588901}]
+          }
+        },
+        {
+          "when": "Orange Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 16357420}]
+          }
+        },
+        {
+          "when": "Pink Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 15699371}]
+          }
+        },
+        {
+          "when": "Purple Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 11028941}]
+          }
+        },
+        {
+          "when": "Red Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 14166827}]
+          }
+        },
+        {
+          "when": "White Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 15395562}]
+          }
+        },
+        {
+          "when": "Yellow Safety Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
+            "tints": [{"type": "constant","value": 16440419}]
+          }
+        },
+        {
+          "when": "Black Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 3618118}]
+          }
+        },
+        {
+          "when": "Blue Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 4545214}]
+          }
+        },
+        {
+          "when": "Brown Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 13600856}]
+          }
+        },
+        {
+          "when": "Cyan Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 2795938}]
+          }
+        },
+        {
+          "when": "Gray Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 7368816}]
+          }
+        },
+        {
+          "when": "Green Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 7308061}]
+          }
+        },
+        {
+          "when": "Light Blue Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 3387597}]
+          }
+        },
+        {
+          "when": "Light Gray Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 10921638}]
+          }
+        },
+        {
+          "when": "Lime Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 10143537}]
+          }
+        },
+        {
+          "when": "Magenta Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 13588901}]
+          }
+        },
+        {
+          "when": "Orange Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 16357420}]
+          }
+        },
+        {
+          "when": "Pink Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 15699371}]
+          }
+        },
+        {
+          "when": "Purple Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 11028941}]
+          }
+        },
+        {
+          "when": "Red Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 14166827}]
+          }
+        },
+        {
+          "when": "White Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 15395562}]
+          }
+        },
+        {
+          "when": "Yellow Chef Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
+            "tints": [{"type": "constant","value": 16440419}]
+          }
+        },
+        {
+          "when": "Traffic Cone Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/safety_hat/traffic_cone"
+          }
+        },
+        {
+          "when": "Unblocker Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/toilet_hats/unblocker"
+          }
+        },
+        {
+          "when": "Toilet Paper Hat",
+          "model": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/hats/toilet_hats/toilet_paper"
+          }
         }
       ],
       "fallback": {

@@ -275,6 +275,93 @@
           "when": {
             "pages": [
               {
+                "raw": "painting\nFrop Skin Poster"
+              }
+            ]
+          },
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/decoration/paintings/1x1/poster/frop_skin_poster"
+            },
+            "cases": [
+              {
+                "when": [
+                  "gui",
+                  "ground"
+                ],
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/decoration/paintings/painting_gui"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "when": {
+            "pages": [
+              {
+                "raw": "painting\nSky Skin Poster"
+              }
+            ]
+          },
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/decoration/paintings/1x1/poster/sky_skin_poster"
+            },
+            "cases": [
+              {
+                "when": [
+                  "gui",
+                  "ground"
+                ],
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/decoration/paintings/painting_gui"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "when": {
+            "pages": [
+              {
+                "raw": "painting\nHarry Skin Poster"
+              }
+            ]
+          },
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/decoration/paintings/1x1/poster/harry_skin_poster"
+            },
+            "cases": [
+              {
+                "when": [
+                  "gui",
+                  "ground"
+                ],
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/decoration/paintings/painting_gui"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "when": {
+            "pages": [
+              {
                 "raw": "Big Cake"
               }
             ]
