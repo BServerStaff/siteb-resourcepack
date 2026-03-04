@@ -940,8 +940,21 @@
         {
           "when": "Farmer's Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/villager_hats/farmer_hat"
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/villager_hats/farmer_hat/farmer_hat_gui"
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/villager_hats/farmer_hat/farmer_hat"
+            }
           }
         },
         {
@@ -977,7 +990,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 3618118}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 3618118
+              }
+            ]
           }
         },
         {
@@ -985,7 +1003,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 4545214}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 4545214
+              }
+            ]
           }
         },
         {
@@ -993,7 +1016,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 13600856}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 13600856
+              }
+            ]
           }
         },
         {
@@ -1001,7 +1029,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 2795938}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 2795938
+              }
+            ]
           }
         },
         {
@@ -1009,7 +1042,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 7368816}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 7368816
+              }
+            ]
           }
         },
         {
@@ -1017,7 +1055,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 7308061}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 7308061
+              }
+            ]
           }
         },
         {
@@ -1025,7 +1068,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 3387597}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 3387597
+              }
+            ]
           }
         },
         {
@@ -1033,7 +1081,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 10921638}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 10921638
+              }
+            ]
           }
         },
         {
@@ -1041,7 +1094,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 10143537}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 10143537
+              }
+            ]
           }
         },
         {
@@ -1049,7 +1107,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 13588901}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 13588901
+              }
+            ]
           }
         },
         {
@@ -1057,7 +1120,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 16357420}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 16357420
+              }
+            ]
           }
         },
         {
@@ -1065,7 +1133,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 15699371}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 15699371
+              }
+            ]
           }
         },
         {
@@ -1073,7 +1146,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 11028941}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 11028941
+              }
+            ]
           }
         },
         {
@@ -1081,7 +1159,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 14166827}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 14166827
+              }
+            ]
           }
         },
         {
@@ -1089,7 +1172,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 15395562}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 15395562
+              }
+            ]
           }
         },
         {
@@ -1097,7 +1185,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/amongus_hat/among_us",
-            "tints": [{"type": "constant","value": 16440419}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 16440419
+              }
+            ]
           }
         },
         {
@@ -1105,7 +1198,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 3618118}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 3618118
+              }
+            ]
           }
         },
         {
@@ -1113,7 +1211,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 4545214}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 4545214
+              }
+            ]
           }
         },
         {
@@ -1121,7 +1224,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 13600856}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 13600856
+              }
+            ]
           }
         },
         {
@@ -1129,7 +1237,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 2795938}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 2795938
+              }
+            ]
           }
         },
         {
@@ -1137,7 +1250,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 7368816}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 7368816
+              }
+            ]
           }
         },
         {
@@ -1145,7 +1263,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 7308061}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 7308061
+              }
+            ]
           }
         },
         {
@@ -1153,7 +1276,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 3387597}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 3387597
+              }
+            ]
           }
         },
         {
@@ -1161,7 +1289,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 10921638}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 10921638
+              }
+            ]
           }
         },
         {
@@ -1169,7 +1302,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 10143537}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 10143537
+              }
+            ]
           }
         },
         {
@@ -1177,7 +1315,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 13588901}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 13588901
+              }
+            ]
           }
         },
         {
@@ -1185,7 +1328,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 16357420}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 16357420
+              }
+            ]
           }
         },
         {
@@ -1193,7 +1341,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 15699371}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 15699371
+              }
+            ]
           }
         },
         {
@@ -1201,7 +1354,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 11028941}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 11028941
+              }
+            ]
           }
         },
         {
@@ -1209,7 +1367,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 14166827}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 14166827
+              }
+            ]
           }
         },
         {
@@ -1217,7 +1380,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 15395562}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 15395562
+              }
+            ]
           }
         },
         {
@@ -1225,135 +1393,524 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/top_hat/top_hat",
-            "tints": [{"type": "constant","value": 16440419}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 16440419
+              }
+            ]
           }
         },
         {
           "when": "Black Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 3618118}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 3618118
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 3618118
+                }
+              ]
+            }
           }
         },
         {
           "when": "Blue Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 4545214}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 4545214
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 4545214
+                }
+              ]
+            }
           }
         },
         {
           "when": "Brown Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 13600856}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 13600856
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 13600856
+                }
+              ]
+            }
           }
         },
         {
           "when": "Cyan Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 2795938}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 2795938
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 2795938
+                }
+              ]
+            }
           }
         },
         {
           "when": "Gray Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 7368816}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 7368816
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 7368816
+                }
+              ]
+            }
           }
         },
         {
           "when": "Green Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 7308061}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 7308061
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 7308061
+                }
+              ]
+            }
           }
         },
         {
           "when": "Light Blue Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 3387597}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 3387597
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 3387597
+                }
+              ]
+            }
           }
         },
         {
           "when": "Light Gray Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 10921638}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 10921638
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 10921638
+                }
+              ]
+            }
           }
         },
         {
           "when": "Lime Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 10143537}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 10143537
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 10143537
+                }
+              ]
+            }
           }
         },
         {
           "when": "Magenta Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 13588901}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 13588901
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 13588901
+                }
+              ]
+            }
           }
         },
         {
           "when": "Orange Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 16357420}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 16357420
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 16357420
+                }
+              ]
+            }
           }
         },
         {
           "when": "Pink Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 15699371}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 15699371
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 15699371
+                }
+              ]
+            }
           }
         },
         {
           "when": "Purple Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 11028941}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 11028941
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 11028941
+                }
+              ]
+            }
           }
         },
         {
           "when": "Red Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 14166827}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 14166827
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 14166827
+                }
+              ]
+            }
           }
         },
         {
           "when": "White Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 15395562}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 15395562
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 15395562
+                }
+              ]
+            }
           }
         },
         {
           "when": "Yellow Safety Hat",
           "model": {
-            "type": "minecraft:model",
-            "model": "siteb:item/equipment/hats/safety_hat/safety_hat",
-            "tints": [{"type": "constant","value": 16440419}]
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat_gui",
+                  "tints": [
+                    {
+                      "type": "constant",
+                      "value": 16440419
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/hats/safety_hat/safety_hat/safety_hat",
+              "tints": [
+                {
+                  "type": "constant",
+                  "value": 16440419
+                }
+              ]
+            }
           }
         },
         {
@@ -1361,7 +1918,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 3618118}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 3618118
+              }
+            ]
           }
         },
         {
@@ -1369,7 +1931,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 4545214}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 4545214
+              }
+            ]
           }
         },
         {
@@ -1377,7 +1944,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 13600856}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 13600856
+              }
+            ]
           }
         },
         {
@@ -1385,7 +1957,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 2795938}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 2795938
+              }
+            ]
           }
         },
         {
@@ -1393,7 +1970,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 7368816}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 7368816
+              }
+            ]
           }
         },
         {
@@ -1401,7 +1983,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 7308061}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 7308061
+              }
+            ]
           }
         },
         {
@@ -1409,7 +1996,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 3387597}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 3387597
+              }
+            ]
           }
         },
         {
@@ -1417,7 +2009,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 10921638}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 10921638
+              }
+            ]
           }
         },
         {
@@ -1425,7 +2022,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 10143537}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 10143537
+              }
+            ]
           }
         },
         {
@@ -1433,7 +2035,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 13588901}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 13588901
+              }
+            ]
           }
         },
         {
@@ -1441,7 +2048,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 16357420}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 16357420
+              }
+            ]
           }
         },
         {
@@ -1449,7 +2061,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 15699371}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 15699371
+              }
+            ]
           }
         },
         {
@@ -1457,7 +2074,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 11028941}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 11028941
+              }
+            ]
           }
         },
         {
@@ -1465,7 +2087,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 14166827}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 14166827
+              }
+            ]
           }
         },
         {
@@ -1473,7 +2100,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 15395562}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 15395562
+              }
+            ]
           }
         },
         {
@@ -1481,7 +2113,12 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/chef_hat/chef_hat",
-            "tints": [{"type": "constant","value": 16440419}]
+            "tints": [
+              {
+                "type": "constant",
+                "value": 16440419
+              }
+            ]
           }
         },
         {
@@ -1503,6 +2140,626 @@
           "model": {
             "type": "minecraft:model",
             "model": "siteb:item/equipment/hats/toilet_hats/toilet_paper"
+          }
+        },
+        {
+          "when": "Black Purple Party Hat",
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:composite",
+                  "models": [
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_base",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 3618118
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_spots",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 13435624
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:composite",
+              "models": [
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_base",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 3618118
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_spots",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 13435624
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "when": "Blue Yellow Party Hat",
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:composite",
+                  "models": [
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_base",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 4545214
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_spots",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 16643080
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:composite",
+              "models": [
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_base",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 4545214
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_spots",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 16643080
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "when": "Purple Lime Party Hat",
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:composite",
+                  "models": [
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_base",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 5636341
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_spots",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 10143537
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:composite",
+              "models": [
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_base",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 5636341
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_spots",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 10143537
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "when": "Red Party Hat",
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:composite",
+                  "models": [
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_base",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 16060175
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_spots",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 16060175
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:composite",
+              "models": [
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_base",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 16060175
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_spots",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 16060175
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "when": "Pink White Party Hat",
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:composite",
+                  "models": [
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_base",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 16092864
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_spots",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 15132390
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:composite",
+              "models": [
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_base",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 16092864
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_spots",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 15132390
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "when": "Green Orange Party Hat",
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:composite",
+                  "models": [
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_base",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 65322
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_spots",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 15432960
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:composite",
+              "models": [
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_base",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 65322
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_spots",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 15432960
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "when": "Blue Pink Party Hat",
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:composite",
+                  "models": [
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_base",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 22015
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_spots",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 16092864
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:composite",
+              "models": [
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_base",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 22015
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_spots",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 16092864
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "when": "Green Party Hat",
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:composite",
+                  "models": [
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_base",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 65331
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_spots",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 65331
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:composite",
+              "models": [
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_base",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 65331
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_spots",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 65331
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "when": "Purple Pink Party Hat",
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:composite",
+                  "models": [
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_base",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 13435624
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_spots",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 16092864
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:composite",
+              "models": [
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_base",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 13435624
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_spots",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 16092864
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "when": "Gray Pink Party Hat",
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "cases": [
+              {
+                "when": "gui",
+                "model": {
+                  "type": "minecraft:composite",
+                  "models": [
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_base",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 10395294
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:model",
+                      "model": "siteb:item/equipment/hats/party_hat/party_hat_gui_spots",
+                      "tints": [
+                        {
+                          "type": "minecraft:constant",
+                          "value": 16092864
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "fallback": {
+              "type": "minecraft:composite",
+              "models": [
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_base",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 10395294
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/hats/party_hat/party_hat_spots",
+                  "tints": [
+                    {
+                      "type": "minecraft:constant",
+                      "value": 16092864
+                    }
+                  ]
+                }
+              ]
+            }
           }
         }
       ],

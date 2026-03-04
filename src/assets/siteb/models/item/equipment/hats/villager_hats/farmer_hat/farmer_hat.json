@@ -2,8 +2,8 @@
 	"format_version": "1.21.6",
 	"credit": "Made by KargoDiaz",
 	"textures": {
-		"0": "siteb:item/equipment/hats/villager_hats/farmer",
-		"particle": "siteb:item/equipment/hats/villager_hats/farmer"
+		"0": "siteb:item/equipment/hats/villager_hats/farmer_hat/farmer",
+		"particle": "siteb:item/equipment/hats/villager_hats/farmer_hat/farmer"
 	},
 	"elements": [
 		{
