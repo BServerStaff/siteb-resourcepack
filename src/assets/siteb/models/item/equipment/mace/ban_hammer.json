@@ -112,7 +112,7 @@
 		},
 		{
 			"from": [7.25, 1.5, 7.25],
-			"to": [7.75, 4.5, 7.75],
+			"to": [7.75, 5.5, 7.75],
 			"rotation": {"angle": 0, "axis": "y", "origin": [7.25, 1.5, 7.25]},
 			"faces": {
 				"north": {"uv": [0, 2, 1, 8], "texture": "#8"},
@@ -139,7 +139,7 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"translation": [0.75, 26.5, 1.75],
+			"translation": [3.25, 26.5, 1.75],
 			"scale": [4, 4, 4]
 		},
 		"thirdperson_lefthand": {

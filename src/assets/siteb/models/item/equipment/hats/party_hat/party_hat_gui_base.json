@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "siteb:item/equipment/hats/party_hat/party_hat_gui_base"
+	}
+}

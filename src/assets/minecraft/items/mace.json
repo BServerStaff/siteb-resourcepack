@@ -1,42 +1,249 @@
 {
-	"model": {
-		"type": "minecraft:select",
-		"property": "minecraft:component",
-		"component": "minecraft:custom_name",
-		"fallback": {
-			"type": "minecraft:model",
-			"model": "minecraft:item/mace"
-		},
-		"cases": [
-			{
-				"when": {
-					"text": "",
-					"extra": [
-						{
-							"text": "☠ Ban Hammer",
-							"color": "red",
-							"italic": false
-						}
-					]
-				},
-				"model": {
-					"type": "minecraft:select",
-					"property": "minecraft:display_context",
-					"fallback": {
-						"type": "minecraft:model",
-						"model": "siteb:item/equipment/mace/ban_hammer"
-					},
-					"cases": [
-						{
-							"when": ["gui", "ground"],
-							"model": {
-								"type": "minecraft:model",
-								"model": "siteb:item/equipment/mace/ban_hammer_gui"
-							}
-						}
-					]
-				}
-			}
-		]
-	}
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:lore",
+    "cases": [
+      {
+        "when": [
+          [
+            {
+              "text": "",
+              "extra": [
+                {
+                  "text": "J",
+                  "color": "#2DBA42",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "u",
+                  "color": "#2DBA42",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "s",
+                  "color": "#2DBA42",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "t",
+                  "color": "#39BB44",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "i",
+                  "color": "#45BD45",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "c",
+                  "color": "#52BE47",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "e ",
+                  "color": "#5EBF48",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "i",
+                  "color": "#76C24B",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "s ",
+                  "color": "#82C34D",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "S",
+                  "color": "#9BC650",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "e",
+                  "color": "#A7C751",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "r",
+                  "color": "#B3C853",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "v",
+                  "color": "#BFCA54",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "e",
+                  "color": "#CBCB56",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "d ",
+                  "color": "#D7CC57",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "⚖",
+                  "color": "#F0CF5A",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                },
+                {
+                  "text": "🄱",
+                  "color": "#FCD05C",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                }
+              ]
+            }
+          ]
+        ],
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "siteb:item/equipment/mace/gavel"
+          },
+          "cases": [
+            {
+              "when": [
+                "gui",
+                "ground"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "siteb:item/equipment/mace/gavel_gui"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:select",
+      "property": "minecraft:component",
+      "component": "minecraft:custom_name",
+      "cases": [
+        {
+          "when": {
+            "text": "",
+            "extra": [
+              {
+                "text": "☠ Ban Hammer",
+                "color": "red",
+                "italic": false
+              }
+            ]
+          },
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/equipment/mace/ban_hammer"
+            },
+            "cases": [
+              {
+                "when": [
+                  "gui",
+                  "ground"
+                ],
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/equipment/mace/ban_hammer_gui"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "cases": [
+          {
+            "when": "6480",
+            "model": {
+              "type": "minecraft:model",
+              "model": "minecraft:item/mace"
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "minecraft:item/mace"
+        }
+      }
+    }
+  }
 }

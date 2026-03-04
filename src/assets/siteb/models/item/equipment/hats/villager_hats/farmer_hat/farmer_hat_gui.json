@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "siteb:item/equipment/hats/villager_hats/farmer_hat/villager_hat"
+	}
+}

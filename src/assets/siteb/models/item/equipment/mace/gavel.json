@@ -1,0 +1,51 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "siteb:item/equipment/mace/ban_hammer",
+	"textures": {
+		"8": "siteb:item/equipment/mace/gavel/gavel"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0.75, 12.75, 1.75],
+			"scale": [2.14, 2.14, 1.6]
+		},
+		"thirdperson_lefthand": {
+			"translation": [-1.75, 12.75, 1.75],
+			"scale": [2.14, 2.14, 1.6]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 16.25, 0],
+			"translation": [0, 7.25, 1.5],
+			"scale": [1.59766, 1.59766, 1.59766]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 16.75, 0],
+			"translation": [-0.5, 6.75, 1],
+			"scale": [1.69336, 1.69336, 1.69336]
+		},
+		"ground": {
+			"translation": [0, 11.75, 0],
+			"scale": [1.83984, 1.83984, 1.83984]
+		},
+		"gui": {
+			"rotation": [90.25, -140, 90],
+			"translation": [3.75, 4, 0],
+			"scale": [1.72, 1.72, 1.72]
+		},
+		"head": {
+			"rotation": [0, -90, 0],
+			"translation": [-2, 16.25, 2.75],
+			"scale": [4, 4, 4]
+		},
+		"fixed": {
+			"rotation": [-88.37, -39.73, -88.96],
+			"translation": [7.5, 8.25, 0],
+			"scale": [2.94336, 2.94336, 2.94336]
+		},
+		"on_shelf": {
+			"rotation": [0, 90, 0],
+			"scale": [2.81, 2.81, 2.81]
+		}
+	}
+}
