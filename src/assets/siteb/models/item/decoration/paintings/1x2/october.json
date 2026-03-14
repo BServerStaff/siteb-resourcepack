@@ -1,0 +1,9 @@
+{
+    "parent": "siteb:item/decoration/paintings/1x2/dino_bath",
+    "credit": "Made by Holliy.Art",
+    "textures": {
+        "0": "siteb:item/decoration/paintings/1x2/october",
+        "particle": "siteb:item/decoration/paintings/1x2/october",
+        "back": "siteb:item/decoration/paintings/1x2/back"
+    }
+}

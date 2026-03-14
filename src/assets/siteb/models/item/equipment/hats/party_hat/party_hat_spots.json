@@ -1,5 +1,6 @@
 {
     "parent": "siteb:item/equipment/hats/party_hat/party_hat_base",
+    "credit": "Made by ???",
     "textures": {
         "0": "siteb:item/equipment/hats/party_hat/spots",
         "particle": "ssiteb:item/equipment/hats/party_hat/spots"

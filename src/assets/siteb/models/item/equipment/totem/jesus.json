@@ -1,6 +1,7 @@
 {
 	"format_version": "1.21.11",
 		"parent": "minecraft:item/totem_of_undying",
+		"credit": "Made by ???",
 	"textures": {
 		"layer0": "siteb:item/equipment/totem/saviour"
 	}

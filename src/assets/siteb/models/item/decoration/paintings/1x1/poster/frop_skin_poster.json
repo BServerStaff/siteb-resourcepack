@@ -1,7 +1,6 @@
 {
 	"format_version": "1.21.6",
 	"credit": "Made by FropDrop",
-	"parent": "item/decoration/paintings/1x1/template",
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "siteb:item/decoration/paintings/1x1/frop_shop_poster/frop_skin",

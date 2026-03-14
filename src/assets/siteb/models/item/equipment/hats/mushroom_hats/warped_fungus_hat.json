@@ -1,5 +1,6 @@
 {
     "parent": "siteb:item/equipment/hats/mushroom_hats/crimson_fungus_hat",
+    "credit": "Made by Ricardo_OP_Art",
     "textures": {
         "hat": "siteb:item/equipment/hats/mushroom_hats/warped_fungus_hat"
     }

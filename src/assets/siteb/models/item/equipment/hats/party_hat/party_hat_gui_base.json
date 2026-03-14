@@ -1,5 +1,6 @@
 {
 	"parent": "minecraft:item/generated",
+	"credit": "Made by ???",
 	"textures": {
 		"layer0": "siteb:item/equipment/hats/party_hat/party_hat_gui_base"
 	}

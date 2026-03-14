@@ -1,5 +1,6 @@
 {
     "parent": "siteb:item/decoration/paintings/1x2/dino_bath",
+    "credit": "Made by ???",
     "textures": {
         "0": "siteb:item/decoration/paintings/1x2/starry_night",
         "particle": "siteb:item/decoration/paintings/1x2/starry_night"

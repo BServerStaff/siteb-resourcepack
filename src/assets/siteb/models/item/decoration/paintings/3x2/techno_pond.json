@@ -1,6 +1,6 @@
 {
 	"format_version": "1.21.6",
-	"parent": "item/paintings/3x2/template",
+	"credit": "Made by ???",
 	"texture_size": [48, 64],
 	"textures": {
 		"0": "siteb:item/decoration/paintings/3x2/techno_pond",
@@ -57,7 +57,7 @@
 		},
 		"fixed": {
 			"translation": [0, 32, 0],
-			"scale": [2, 2, 1]
+			"scale": [2, 2, 2]
 		},
 		"on_shelf": {
 			"rotation": [0, -180, 0],

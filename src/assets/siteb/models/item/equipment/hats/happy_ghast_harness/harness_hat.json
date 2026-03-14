@@ -1,6 +1,7 @@
 {
 	"format_version": "1.21.6",
 		"texture_size": [32, 32],
+		"credit": "Made by ???",
 	"textures": {
 		"0": "siteb:item/equipment/hats/happy_ghast_harness/harness_hat",
 		"particle": "siteb:item/equipment/hats/happy_ghast_harness/harness_hat"
