@@ -1,10 +1,25 @@
 {
 	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
-	"parent": "item/paintings/template",
+	"credit": "Made by Wimu",
 	"textures": {
+		"0": "siteb:item/decoration/paintings/1x1/wimu",
 		"back": "siteb:item/decoration/paintings/1x2/back"
 	},
+	"elements": [
+		{
+			"from": [16, 0, 8],
+			"to": [0, 16, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [16, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#back"},
+				"east": {"uv": [15.5, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 0.5, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 0.5], "texture": "#0"},
+				"down": {"uv": [0, 15.5, 16, 16], "texture": "#0"}
+			}
+		}
+	],
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [-180, 0, -180],
@@ -17,14 +32,14 @@
 			"scale": [0.5, 0.5, 0.5]
 		},
 		"firstperson_righthand": {
-			"rotation": [-180, 30, -160],
-			"translation": [8, -4, -8],
-			"scale": [0.75, 0.75, 0.75]
+			"rotation": [0, -180, 0],
+			"translation": [2, 3.5, 0],
+			"scale": [0.4, 0.4, 0.4]
 		},
 		"firstperson_lefthand": {
-			"rotation": [0, 150, 20],
-			"translation": [8, -4, -8],
-			"scale": [0.75, 0.75, 0.75]
+			"rotation": [0, -180, 0],
+			"translation": [2, 3.5, 0],
+			"scale": [0.4, 0.4, 0.4]
 		},
 		"ground": {
 			"translation": [0, 2, 0],

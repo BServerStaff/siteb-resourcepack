@@ -30,7 +30,7 @@
               "when": {
                 "pages": [
                   {
-                    "raw": "Big Cake"
+                    "raw": "painting\nKidonthy"
                   }
                 ]
               },
@@ -39,7 +39,7 @@
                 "property": "minecraft:display_context",
                 "fallback": {
                   "type": "minecraft:model",
-                  "model": "siteb:item/decoration/display_foods/big_cake/big_cake"
+                  "model": "siteb:item/decoration/paintings/3x4/kidonthy"
                 },
                 "cases": [
                   {
@@ -49,7 +49,7 @@
                     ],
                     "model": {
                       "type": "minecraft:model",
-                      "model": "siteb:item/decoration/display_foods/big_cake/big_cake_gui"
+                      "model": "siteb:item/decoration/paintings/painting_gui"
                     }
                   }
                 ]
@@ -343,6 +343,93 @@
             "fallback": {
               "type": "minecraft:model",
               "model": "siteb:item/decoration/paintings/1x1/poster/harry_skin_poster"
+            },
+            "cases": [
+              {
+                "when": [
+                  "gui",
+                  "ground"
+                ],
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/decoration/paintings/painting_gui"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "when": {
+            "pages": [
+              {
+                "raw": "painting\nKoda"
+              }
+            ]
+          },
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/decoration/paintings/3x3/koda"
+            },
+            "cases": [
+              {
+                "when": [
+                  "gui",
+                  "ground"
+                ],
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/decoration/paintings/painting_gui"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "when": {
+            "pages": [
+              {
+                "raw": "painting\nWimu Farmer"
+              }
+            ]
+          },
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/decoration/paintings/1x1/wimu"
+            },
+            "cases": [
+              {
+                "when": [
+                  "gui",
+                  "ground"
+                ],
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/decoration/paintings/painting_gui"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "when": {
+            "pages": [
+              {
+                "raw": "painting\nOctober"
+              }
+            ]
+          },
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/decoration/paintings/1x2/october"
             },
             "cases": [
               {

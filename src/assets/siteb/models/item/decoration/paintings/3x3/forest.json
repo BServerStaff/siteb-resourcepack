@@ -1,7 +1,6 @@
 {
 	"format_version": "1.21.6",
-	"credit": "Made by",
-	"parent": "item/paintings/3x3/template",
+	"credit": "Made by Axperty",
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "siteb:item/decoration/paintings/3x3/forest",
@@ -58,7 +57,7 @@
 		},
 		"fixed": {
 			"translation": [-8, 56, 0],
-			"scale": [3, 3, 1]
+			"scale": [3, 3, 2]
 		},
 		"on_shelf": {
 			"rotation": [0, -180, 0],

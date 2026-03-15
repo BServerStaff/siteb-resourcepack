@@ -14,29 +14,65 @@
       {
         "when": "wild",
         "model": {
-          "type": "minecraft:model",
-          "model": "siteb:item/qol/axolotl/axolotl_bucket_wild"
+          "type": "minecraft:composite",
+          "models": [
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/axolotl_bucket"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "siteb:item/qol/axolotl/axolotl_bucket_wild"
+            }
+          ]
         }
       },
       {
         "when": "gold",
         "model": {
-          "type": "minecraft:model",
-          "model": "siteb:item/qol/axolotl/axolotl_bucket_gold"
+          "type": "minecraft:composite",
+          "models": [
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/axolotl_bucket"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "siteb:item/qol/axolotl/axolotl_bucket_gold"
+            }
+          ]
         }
       },
       {
         "when": "cyan",
         "model": {
-          "type": "minecraft:model",
-          "model": "siteb:item/qol/axolotl/axolotl_bucket_cyan"
+          "type": "minecraft:composite",
+          "models": [
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/axolotl_bucket"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "siteb:item/qol/axolotl/axolotl_bucket_cyan"
+            }
+          ]
         }
       },
       {
         "when": "blue",
         "model": {
-          "type": "minecraft:model",
-          "model": "siteb:item/qol/axolotl/axolotl_bucket_blue"
+          "type": "minecraft:composite",
+          "models": [
+            {
+              "type": "minecraft:model",
+              "model": "minecraft:item/axolotl_bucket"
+            },
+            {
+              "type": "minecraft:model",
+              "model": "siteb:item/qol/axolotl/axolotl_bucket_blue"
+            }
+          ]
         }
       }
     ],

@@ -1,8 +1,8 @@
 {
     "parent": "siteb:item/decoration/paintings/2x2/a_boat",
+    "credit": "Made by Axperty",
     "textures": {
         "0": "siteb:item/decoration/paintings/2x2/pyramid",
-        "particle": "siteb:item/decoration/paintings/2x2/pyramid",
-        "back": "siteb:item/decoration/paintings/3x2/back"
+        "particle": "siteb:item/decoration/paintings/2x2/pyramid"
     }
 }

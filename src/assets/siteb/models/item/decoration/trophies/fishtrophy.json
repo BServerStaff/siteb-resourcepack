@@ -1,5 +1,6 @@
 {
 	"format_version": "1.21.11",
+	"credit": "Made by ???",
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "siteb:item/decoration/trophies/fishtrophy",

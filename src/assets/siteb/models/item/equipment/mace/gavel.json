@@ -1,6 +1,6 @@
 {
 	"format_version": "1.21.11",
-	"credit": "Made with Blockbench",
+	"credit": "Made by pezpizza",
 	"parent": "siteb:item/equipment/mace/ban_hammer",
 	"textures": {
 		"8": "siteb:item/equipment/mace/gavel/gavel"

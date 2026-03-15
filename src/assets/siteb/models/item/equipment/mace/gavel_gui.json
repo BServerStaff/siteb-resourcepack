@@ -1,6 +1,6 @@
 {
 	"format_version": "1.21.11",
-	"credit": "Made with Blockbench",
+	"credit": "Made by pezpizza",
 	"parent": "minecraft:item/generated",
 	"textures": {
 		"layer0": "siteb:item/equipment/mace/gavel/gavel_gui"

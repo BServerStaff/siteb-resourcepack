@@ -1,5 +1,6 @@
 {
     "parent": "siteb:item/decoration/paintings/3x3/forest",
+    "credit": "Made by Axperty",
     "textures": {
         "0": "siteb:item/decoration/paintings/3x3/lonely_tree",
         "particle": "siteb:item/decoration/paintings/3x3/lonely_tree",

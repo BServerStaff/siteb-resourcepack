@@ -1,11 +1,11 @@
 {
 	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
-	"parent": "siteb:item/decoration/paintings/1x2/template",
+	"credit": "Made ny Dino",
 	"texture_size": [64, 32],
 	"textures": {
 		"0": "siteb:item/decoration/paintings/1x2/dino_bath",
-		"particle": "siteb:item/decoration/paintings/1x2/dino_bath"
+		"particle": "siteb:item/decoration/paintings/1x2/dino_bath",
+		"back": "siteb:item/decoration/paintings/1x2/back"
 	},
 	"elements": [
 		{

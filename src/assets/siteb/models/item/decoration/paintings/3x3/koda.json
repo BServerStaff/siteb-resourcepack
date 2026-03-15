@@ -1,0 +1,9 @@
+{
+    "parent": "siteb:item/decoration/paintings/3x3/forest",
+    "credit": "Made by Dino",
+    "textures": {
+        "0": "siteb:item/decoration/paintings/3x3/koda",
+        "particle": "siteb:item/decoration/paintings/3x3/koda",
+        "back": "siteb:item/decoration/paintings/3x2/back"
+    }
+}

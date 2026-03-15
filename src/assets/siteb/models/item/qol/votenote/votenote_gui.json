@@ -1,5 +1,6 @@
 {
 	"parent": "minecraft:item/generated",
+	"credit": "Made by Dino",
 	"textures": {
 		"layer0": "siteb:item/qol/votenote/votenote_gui"
 	}
