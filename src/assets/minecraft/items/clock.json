@@ -66,6 +66,475 @@
       },
       {
         "when": [
+          [
+            [
+              [
+                {
+                  "text": "",
+                  "extra": [
+                    {
+                      "text": "ʙ",
+                      "color": "#B844B8",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "ᴀ",
+                      "color": "#B644B6",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "ʙ",
+                      "color": "#B444B4",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "ʏ ",
+                      "color": "#B244B2",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "ᴅ",
+                      "color": "#AF44AF",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "ʀ",
+                      "color": "#AD44AD",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "ᴀ",
+                      "color": "#AB44AB",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "ɢ",
+                      "color": "#A944A9",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "ᴏ",
+                      "color": "#A744A7",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "ɴ",
+                      "color": "#A544A5",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    }
+                  ]
+                }
+              ]
+            ]
+          ]
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "siteb:item/decoration/plushies/baby_ender_dragon_plushie"
+        }
+      },
+      {
+        "when": [
+          [
+            [
+              [
+                {
+                  "text": "",
+                  "extra": [
+                    {
+                      "text": "B",
+                      "color": "#FEBA17",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "u",
+                      "color": "#FEBF20",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "i",
+                      "color": "#FEC329",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "l",
+                      "color": "#FEC833",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "d ",
+                      "color": "#FECC3C",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "C",
+                      "color": "#FFD54E",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "o",
+                      "color": "#FFDA57",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "m",
+                      "color": "#FFDE60",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "p ",
+                      "color": "#FFE36A",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "#",
+                      "color": "#FFEC7C",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    },
+                    {
+                      "text": "1",
+                      "color": "#FFF085",
+                      "bold": false,
+                      "italic": false,
+                      "underlined": false,
+                      "strikethrough": false,
+                      "obfuscated": false
+                    }
+                  ]
+                }
+              ]
+            ]
+          ]
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "siteb:item/decoration/plushies/nm_adorable_trophy_gold"
+        }
+      },
+      {
+        "when": [
+          [
+            [
+              [
+                [
+                  {
+                    "text": "",
+                    "extra": [
+                      {
+                        "text": "B",
+                        "color": "#969696",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      },
+                      {
+                        "text": "u",
+                        "color": "#9F9F9F",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      },
+                      {
+                        "text": "i",
+                        "color": "#A8A8A8",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      },
+                      {
+                        "text": "l",
+                        "color": "#B0B0B0",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      },
+                      {
+                        "text": "d ",
+                        "color": "#B9B9B9",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      },
+                      {
+                        "text": "C",
+                        "color": "#CBCBCB",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      },
+                      {
+                        "text": "o",
+                        "color": "#D3D3D3",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      },
+                      {
+                        "text": "m",
+                        "color": "#DCDCDC",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      },
+                      {
+                        "text": "p ",
+                        "color": "#E5E5E5",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      },
+                      {
+                        "text": "#",
+                        "color": "#F6F6F6",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      },
+                      {
+                        "text": "2",
+                        "color": "#FFFFFF",
+                        "bold": false,
+                        "italic": false,
+                        "underlined": false,
+                        "strikethrough": false,
+                        "obfuscated": false
+                      }
+                    ]
+                  }
+                ]
+              ]
+            ]
+          ]
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "siteb:item/decoration/plushies/nm_adorable_trophy_silver"
+        }
+      },
+      {
+        "when": [
+          [
+            [
+              [
+                [
+                  [
+                    {
+                      "text": "",
+                      "extra": [
+                        {
+                          "text": "B",
+                          "color": "#964302",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        },
+                        {
+                          "text": "u",
+                          "color": "#984709",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        },
+                        {
+                          "text": "i",
+                          "color": "#994C0F",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        },
+                        {
+                          "text": "l",
+                          "color": "#9B5016",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        },
+                        {
+                          "text": "d ",
+                          "color": "#9C551C",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        },
+                        {
+                          "text": "C",
+                          "color": "#A05E2A",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        },
+                        {
+                          "text": "o",
+                          "color": "#A16230",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        },
+                        {
+                          "text": "m",
+                          "color": "#A36637",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        },
+                        {
+                          "text": "p ",
+                          "color": "#A46B3D",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        },
+                        {
+                          "text": "#",
+                          "color": "#A7744A",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        },
+                        {
+                          "text": "3",
+                          "color": "#A97851",
+                          "bold": false,
+                          "italic": false,
+                          "underlined": false,
+                          "strikethrough": false,
+                          "obfuscated": false
+                        }
+                      ]
+                    }
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "siteb:item/decoration/plushies/nm_adorable_trophy_bronze"
+        }
+      },
+      {
+        "when": [
           {
             "text": "Mythic",
             "color": "gold",
