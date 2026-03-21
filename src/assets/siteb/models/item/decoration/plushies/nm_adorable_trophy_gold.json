@@ -1,0 +1,8 @@
+{
+    "parent": "siteb:item/decoration/plushies/nm_adorable_trophy_bronze",
+    "credit": "Made by Nog's Menagerie",
+    "textures": {
+        "0": "siteb:item/decoration/plushies/nm_adorable_trophy_gold_texture",
+        "particle": "siteb:item/decoration/plushies/nm_adorable_trophy_gold_texture"
+    }
+}

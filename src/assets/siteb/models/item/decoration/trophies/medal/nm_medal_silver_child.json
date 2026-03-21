@@ -1,0 +1,7 @@
+{
+    "parent": "siteb:item/decoration/trophies/medal/nm_medal_gold",
+    "textures": {
+        "0": "siteb:item/decoration/trophies/silver_medal/nm_medal_silver_texture",
+        "particle": "siteb:item/decoration/trophies/silver_medal/nm_medal_silver_texture"
+    }
+}

@@ -449,6 +449,35 @@
           "when": {
             "pages": [
               {
+                "raw": "painting\nBruni"
+              }
+            ]
+          },
+          "model": {
+            "type": "minecraft:select",
+            "property": "minecraft:display_context",
+            "fallback": {
+              "type": "minecraft:model",
+              "model": "siteb:item/decoration/paintings/1x1/bruni"
+            },
+            "cases": [
+              {
+                "when": [
+                  "gui",
+                  "ground"
+                ],
+                "model": {
+                  "type": "minecraft:model",
+                  "model": "siteb:item/decoration/paintings/painting_gui"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "when": {
+            "pages": [
+              {
                 "raw": "Big Cake"
               }
             ]
