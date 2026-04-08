@@ -535,6 +535,138 @@
       },
       {
         "when": [
+          [
+            {
+              "text": "",
+              "extra": [
+                {
+                  "text": "1st",
+                  "color": "#B18800",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                }
+              ]
+            }
+          ]
+        ],
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "firstperson_righthand",
+                "firstperson_lefthand",
+                "thirdperson_righthand",
+                "thirdperson_lefthand",
+                "gui",
+                "ground"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "siteb:item/decoration/trophies/medal/gold_medal_gui"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "siteb:item/decoration/trophies/medal/nm_medal_gold"
+          }
+        }
+      },
+      {
+        "when": [
+          [
+            {
+              "text": "",
+              "extra": [
+                {
+                  "text": "2nd",
+                  "color": "#A7A7AD",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                }
+              ]
+            }
+          ]
+        ],
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "firstperson_righthand",
+                "firstperson_lefthand",
+                "thirdperson_righthand",
+                "thirdperson_lefthand",
+                "gui",
+                "ground"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "siteb:item/decoration/trophies/medal/silver_medal_gui"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "siteb:item/decoration/trophies/medal/nm_medal_silver_child"
+          }
+        }
+      },
+      {
+        "when": [
+          [
+            {
+              "text": "",
+              "extra": [
+                {
+                  "text": "3rd",
+                  "color": "#A77044",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                }
+              ]
+            }
+          ]
+        ],
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "firstperson_righthand",
+                "firstperson_lefthand",
+                "thirdperson_righthand",
+                "thirdperson_lefthand",
+                "gui",
+                "ground"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "siteb:item/decoration/trophies/medal/bronze_medal"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "siteb:item/decoration/trophies/medal/nm_medal_bronze"
+          }
+        }
+      },
+      {
+        "when": [
           {
             "text": "Mythic",
             "color": "gold",
