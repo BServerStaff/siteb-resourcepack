@@ -57,3 +57,28 @@ src/assets/siteb/textures/item/artifact/vote_note/
 Vanilla definitions under `assets/minecraft/items` remain useful for global or
 legacy overrides. dinoCore artifacts should use namespaced definitions under
 `assets/siteb/items/artifact` instead of matching custom names or lore.
+
+### Plushies
+
+Plushies use:
+
+```text
+siteb:artifact/plushie/<plushie_id>
+```
+
+Their definitions are generated at:
+
+```text
+src/assets/siteb/items/artifact/plushie/<plushie_id>.json
+```
+
+The dinoCore repository contains `tools/sync-plushies.js`, which synchronizes
+these definitions and `plushies.yml` from the model files in:
+
+```text
+src/assets/siteb/models/item/decoration/plushies/
+```
+
+Plushies with a rarity appear in the shop. The baby dragon and three placement
+trophies have no rarity and are command-only. The SiteB box model is used by
+the separate `siteb:artifact/b_box` loot-box artifact.

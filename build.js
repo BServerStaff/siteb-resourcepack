@@ -23,7 +23,8 @@ const ARTIFACT_IDS = [
 	"head_bowl",
 	"mob_silencer",
 	"mob_unsilencer",
-	"siteb_guidebook"
+	"siteb_guidebook",
+	"b_box"
 ];
 
 if (SRC === OUT || SRC.startsWith(OUT + path.sep)) {
@@ -85,6 +86,45 @@ function validateArtifactDefinitions() {
 	if (missing.length > 0) {
 		throw new Error(
 			`Missing dinoCore artifact definitions: ${missing.join(", ")}`
+		);
+	}
+
+	const plushieModelRoot = path.join(
+		SRC,
+		"assets",
+		"siteb",
+		"models",
+		"item",
+		"decoration",
+		"plushies"
+	);
+	const plushieItemRoot = path.join(root, "plushie");
+	const specialPlushieIds = {
+		baby_ender_dragon_plushie: "baby_dragon",
+		nm_adorable_trophy_gold: "first_place_trophy",
+		nm_adorable_trophy_silver: "second_place_trophy",
+		nm_adorable_trophy_bronze: "third_place_trophy"
+	};
+	const plushieIds = fs
+		.readdirSync(plushieModelRoot)
+		.filter(name => name.endsWith(".json"))
+		.map(name => name.slice(0, -5))
+		.filter(name => name !== "siteb-box")
+		.map(name => {
+			if (specialPlushieIds[name]) {
+				return specialPlushieIds[name];
+			}
+			if (name.startsWith("plushie_")) {
+				return name.slice("plushie_".length);
+			}
+			throw new Error(`Unmapped plushie model: ${name}`);
+		});
+	const missingPlushies = plushieIds.filter(
+		id => !fs.existsSync(path.join(plushieItemRoot, `${id}.json`))
+	);
+	if (missingPlushies.length > 0) {
+		throw new Error(
+			`Missing plushie item definitions: ${missingPlushies.join(", ")}`
 		);
 	}
 }
