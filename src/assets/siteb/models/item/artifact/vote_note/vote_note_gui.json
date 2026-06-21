@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "siteb:item/artifact/vote_note/vote_note_gui"
+	}
+}

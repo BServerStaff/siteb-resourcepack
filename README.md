@@ -1,4 +1,5 @@
 # SiteB Resource Pack
+(updates for 26.2)
 
 Resource pack for the SiteB Minecraft server.
 
