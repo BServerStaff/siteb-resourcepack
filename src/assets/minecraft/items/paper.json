@@ -15,11 +15,7 @@
             {
               "text": "Vote Note",
               "color": "aqua",
-              "italic": false,
-              "underlined": false,
-              "bold": false,
-              "obfuscated": false,
-              "strikethrough": false
+              "italic": false
             }
           ]
         },
@@ -28,7 +24,7 @@
           "property": "minecraft:display_context",
           "fallback": {
             "type": "minecraft:model",
-            "model": "siteb:item/qol/votenote/votenote"
+            "model": "siteb:item/artifact/votenote/votenote"
           },
           "cases": [
             {
@@ -38,7 +34,7 @@
               ],
               "model": {
                 "type": "minecraft:model",
-                "model": "siteb:item/qol/votenote/votenote_gui",
+                "model": "siteb:item/artifact/votenote/votenote_gui",
                 "tints": [
                   {
                     "type": "minecraft:constant",

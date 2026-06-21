@@ -1,7 +1,9 @@
 Resourcepack for the SiteB Minecraft server.
 
+`$ node build.js <srcDir> <outDir> <zipName>`
+
 ```bash
-node build.js <srcDir> <outDir> <zipName>
+node build.js ".\src" ".\build" "SiteB.zip"
 ```
 
 > [!NOTE]
