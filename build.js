@@ -34,6 +34,25 @@ const SHOP_CATEGORY_IDS = [
 	"misc",
 	"plushies"
 ];
+const SHOP_CATEGORY_MATERIALS = {
+	season_2_tags: "creeper_banner_pattern",
+	season_3_tags: "skull_banner_pattern",
+	season_4_tags: "mojang_banner_pattern",
+	pokemon_tags: "sniffer_egg",
+	misc: "command_block_minecart",
+	plushies: "oxidized_copper_chest"
+};
+const ARTIFACT_MATERIALS = {
+	vote_note: "paper",
+	two_birds_one_arrow: "feather",
+	big_size: "iron_golem_spawn_egg",
+	small_size: "allay_spawn_egg",
+	head_bowl: "bowl",
+	mob_silencer: "wooden_hoe",
+	mob_unsilencer: "stick",
+	siteb_guidebook: "knowledge_book",
+	random_plushie_box: "oxidized_copper_chest"
+};
 
 if (SRC === OUT || SRC.startsWith(OUT + path.sep)) {
 	console.error("Output directory must not contain the source directory.");
@@ -138,14 +157,6 @@ function validateArtifactDefinitions() {
 }
 
 function validateShopCategoryDefinitions() {
-	const itemRoot = path.join(
-		SRC,
-		"assets",
-		"siteb",
-		"items",
-		"shop",
-		"category"
-	);
 	const modelRoot = path.join(
 		SRC,
 		"assets",
@@ -156,20 +167,111 @@ function validateShopCategoryDefinitions() {
 		"shop",
 		"category"
 	);
-	const missingItems = SHOP_CATEGORY_IDS.filter(
-		id => !fs.existsSync(path.join(itemRoot, `${id}.json`))
-	);
 	const missingModels = SHOP_CATEGORY_IDS.filter(
 		id => !fs.existsSync(path.join(modelRoot, `${id}.json`))
 	);
-	if (missingItems.length > 0) {
-		throw new Error(
-			`Missing dinoCore shop category definitions: ${missingItems.join(", ")}`
-		);
-	}
 	if (missingModels.length > 0) {
 		throw new Error(
 			`Missing dinoCore shop category models: ${missingModels.join(", ")}`
+		);
+	}
+	const plushiesTexture = path.join(
+		SRC,
+		"assets",
+		"siteb",
+		"textures",
+		"item",
+		"gui",
+		"shop",
+		"category",
+		"plushies.png"
+	);
+	if (!fs.existsSync(plushiesTexture)) {
+		throw new Error("Missing Plushies shop category texture.");
+	}
+}
+
+function customModelCase(value, model) {
+	return {
+		when: value,
+		model: typeof model === "string"
+			? {
+				type: "minecraft:model",
+				model
+			}
+			: model
+	};
+}
+
+function writeDinoCoreFallbackDefinitions() {
+	const casesByMaterial = new Map();
+	const addCase = (material, value, model) => {
+		const cases = casesByMaterial.get(material) || [];
+		cases.push(customModelCase(value, model));
+		casesByMaterial.set(material, cases);
+	};
+	const artifactRoot = path.join(
+		SRC,
+		"assets",
+		"siteb",
+		"items",
+		"artifact"
+	);
+	const artifactModel = relativePath => {
+		const definition = JSON.parse(fs.readFileSync(
+			path.join(artifactRoot, relativePath),
+			"utf8"
+		));
+		return definition.model;
+	};
+
+	for (const [id, material] of Object.entries(ARTIFACT_MATERIALS)) {
+		addCase(
+			material,
+			`dinocore:artifact/${id}`,
+			artifactModel(`${id}.json`)
+		);
+	}
+
+	const plushieRoot = path.join(artifactRoot, "plushie");
+	for (const file of fs.readdirSync(plushieRoot).sort()) {
+		if (!file.endsWith(".json")) {
+			continue;
+		}
+		const id = file.slice(0, -5);
+		addCase(
+			"paper",
+			`dinocore:artifact/plushie/${id}`,
+			artifactModel(path.join("plushie", file))
+		);
+	}
+
+	for (const [id, material] of Object.entries(SHOP_CATEGORY_MATERIALS)) {
+		addCase(
+			material,
+			`dinocore:shop/category/${id}`,
+			`siteb:item/gui/shop/category/${id}`
+		);
+	}
+
+	const outputRoot = path.join(OUT, "assets", "minecraft", "items");
+	ensureDir(outputRoot);
+	for (const [material, cases] of casesByMaterial) {
+		const definition = {
+			model: {
+				type: "minecraft:select",
+				property: "minecraft:custom_model_data",
+				cases,
+				fallback: {
+					type: "minecraft:model",
+					model: `minecraft:item/${material}`
+				}
+			}
+		};
+		fs.writeFileSync(
+			path.join(outputRoot, `${material}.json`),
+			JSON.stringify(definition),
+			"utf8"
 		);
 	}
 }
@@ -222,6 +324,7 @@ try {
 	fs.rmSync(ZIP, { force: true });
 	ensureDir(OUT);
 	walk(SRC);
+	writeDinoCoreFallbackDefinitions();
 	zipFolder();
 	writeSha1(ZIP);
 	console.log(`Done.\nOutput folder: ${OUT}\nZip file: ${ZIP}`);

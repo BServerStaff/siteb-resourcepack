@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecraft:block/beehive_front_honey"
+    "layer0": "siteb:item/gui/shop/category/plushies"
   }
 }

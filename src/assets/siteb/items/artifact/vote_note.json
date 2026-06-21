@@ -4,7 +4,7 @@
     "property": "minecraft:display_context",
     "fallback": {
       "type": "minecraft:model",
-      "model": "siteb:item/artifact/vote_note/vote_note"
+      "model": "siteb:items/artifact/vote_note/vote_note"
     },
     "cases": [
       {
@@ -14,7 +14,7 @@
         ],
         "model": {
           "type": "minecraft:model",
-          "model": "siteb:item/artifact/vote_note/vote_note_gui",
+          "model": "siteb:items/artifact/vote_note/vote_note_gui",
           "tints": [
             {
               "type": "minecraft:constant",

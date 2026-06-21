@@ -21,33 +21,37 @@ the ZIP, and writes its SHA-1 to `sha1.txt`. On Windows it automatically uses
 
 ## dinoCore artifacts
 
-dinoCore sets each artifact's `minecraft:item_model` component to:
+dinoCore sets each artifact's string custom-model-data component to:
 
 ```text
-siteb:artifact/<artifact_id>
+dinocore:artifact/<artifact_id>
 ```
 
-Item definitions therefore live at:
+The build reads the matching SiteB item definition from:
 
 ```text
 src/assets/siteb/items/artifact/<artifact_id>.json
 ```
 
-The pack defines every current artifact. Artifacts without custom artwork point
-to their vanilla model until custom assets are added.
+It then generates vanilla-material selectors in the built pack. Each selector
+has a normal Minecraft model fallback, so declining the pack never produces a
+missing texture.
 
 ## dinoCore shop category icons
 
-The main shop GUI sets each category icon's `minecraft:item_model` to:
+The main shop GUI sets each category icon's string custom-model-data value to:
 
 ```text
-siteb:shop/category/<category_id>
+dinocore:shop/category/<category_id>
 ```
 
-Definitions and their GUI-only models live at:
+The build generates vanilla item definitions that select the custom route only
+when that value is present, then fall back to the normal vanilla model. This
+means players without the resource pack still see the configured vanilla icon.
+
+GUI-only models live at:
 
 ```text
-src/assets/siteb/items/shop/category/<category_id>.json
 src/assets/siteb/models/item/gui/shop/category/<category_id>.json
 ```
 
@@ -79,10 +83,10 @@ legacy overrides. dinoCore artifacts should use namespaced definitions under
 
 ### Plushies
 
-Plushies use:
+Plushies carry:
 
 ```text
-siteb:artifact/plushie/<plushie_id>
+dinocore:artifact/plushie/<plushie_id>
 ```
 
 Their definitions are generated at:
@@ -100,4 +104,4 @@ src/assets/siteb/models/item/decoration/plushies/
 
 Plushies with a rarity appear in the shop. The baby dragon and three placement
 trophies have no rarity and are command-only. The SiteB box model is used by
-the separate `siteb:artifact/random_plushie_box` loot-box artifact.
+the separate `dinocore:artifact/random_plushie_box` loot-box artifact.
