@@ -24,7 +24,7 @@ const ARTIFACT_IDS = [
 	"mob_silencer",
 	"mob_unsilencer",
 	"siteb_guidebook",
-	"b_box"
+	"random_plushie_box"
 ];
 
 if (SRC === OUT || SRC.startsWith(OUT + path.sep)) {

@@ -81,4 +81,4 @@ src/assets/siteb/models/item/decoration/plushies/
 
 Plushies with a rarity appear in the shop. The baby dragon and three placement
 trophies have no rarity and are command-only. The SiteB box model is used by
-the separate `siteb:artifact/b_box` loot-box artifact.
+the separate `siteb:artifact/random_plushie_box` loot-box artifact.
