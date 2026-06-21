@@ -36,6 +36,25 @@ src/assets/siteb/items/artifact/<artifact_id>.json
 The pack defines every current artifact. Artifacts without custom artwork point
 to their vanilla model until custom assets are added.
 
+## dinoCore shop category icons
+
+The main shop GUI sets each category icon's `minecraft:item_model` to:
+
+```text
+siteb:shop/category/<category_id>
+```
+
+Definitions and their GUI-only models live at:
+
+```text
+src/assets/siteb/items/shop/category/<category_id>.json
+src/assets/siteb/models/item/gui/shop/category/<category_id>.json
+```
+
+The included models use vanilla textures as defaults. To customize an icon,
+add a PNG under `textures/item/gui/shop/category/` and change that model's
+`layer0` to `siteb:item/gui/shop/category/<category_id>`.
+
 Recommended custom-art layout:
 
 ```text

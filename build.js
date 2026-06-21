@@ -26,6 +26,14 @@ const ARTIFACT_IDS = [
 	"siteb_guidebook",
 	"random_plushie_box"
 ];
+const SHOP_CATEGORY_IDS = [
+	"season_2_tags",
+	"season_3_tags",
+	"season_4_tags",
+	"pokemon_tags",
+	"misc",
+	"plushies"
+];
 
 if (SRC === OUT || SRC.startsWith(OUT + path.sep)) {
 	console.error("Output directory must not contain the source directory.");
@@ -129,6 +137,43 @@ function validateArtifactDefinitions() {
 	}
 }
 
+function validateShopCategoryDefinitions() {
+	const itemRoot = path.join(
+		SRC,
+		"assets",
+		"siteb",
+		"items",
+		"shop",
+		"category"
+	);
+	const modelRoot = path.join(
+		SRC,
+		"assets",
+		"siteb",
+		"models",
+		"item",
+		"gui",
+		"shop",
+		"category"
+	);
+	const missingItems = SHOP_CATEGORY_IDS.filter(
+		id => !fs.existsSync(path.join(itemRoot, `${id}.json`))
+	);
+	const missingModels = SHOP_CATEGORY_IDS.filter(
+		id => !fs.existsSync(path.join(modelRoot, `${id}.json`))
+	);
+	if (missingItems.length > 0) {
+		throw new Error(
+			`Missing dinoCore shop category definitions: ${missingItems.join(", ")}`
+		);
+	}
+	if (missingModels.length > 0) {
+		throw new Error(
+			`Missing dinoCore shop category models: ${missingModels.join(", ")}`
+		);
+	}
+}
+
 function zipFolder() {
 	const installed7Zip = "C:\\Program Files\\7-Zip\\7z.exe";
 	const executable =
@@ -172,6 +217,7 @@ function writeSha1(zipPath) {
 
 try {
 	validateArtifactDefinitions();
+	validateShopCategoryDefinitions();
 	fs.rmSync(OUT, { recursive: true, force: true });
 	fs.rmSync(ZIP, { force: true });
 	ensureDir(OUT);
