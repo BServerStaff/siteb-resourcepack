@@ -1,111 +1,145 @@
 #!/usr/bin/env node
-/**
- * Cross-platform JSON minify + zip
- * Usage:
- *   node build.js <srcDir> <outDir> <zipName>
- */
 
+const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 const { spawnSync } = require("child_process");
-const crypto = require("crypto");
 
 const [, , srcArg, outArg, zipArg] = process.argv;
 
 if (!srcArg || !outArg || !zipArg) {
-	console.error("Usage: node minify-and-zip.js <srcDir> <outDir> <zipName>");
+	console.error("Usage: node build.js <srcDir> <outDir> <zipName>");
 	process.exit(1);
 }
 
 const SRC = path.resolve(srcArg);
 const OUT = path.resolve(outArg);
 const ZIP = path.resolve(zipArg);
+const ARTIFACT_IDS = [
+	"vote_note",
+	"two_birds_one_arrow",
+	"big_size",
+	"small_size",
+	"head_bowl",
+	"mob_silencer",
+	"mob_unsilencer",
+	"siteb_guidebook"
+];
 
-function ensureDir(p) {
-	fs.mkdirSync(p, { recursive: true });
+if (SRC === OUT || SRC.startsWith(OUT + path.sep)) {
+	console.error("Output directory must not contain the source directory.");
+	process.exit(1);
 }
 
-function minifyJson(src, dst) {
-	ensureDir(path.dirname(dst));
-	const data = fs.readFileSync(src, "utf8");
-	const min = JSON.stringify(JSON.parse(data));
-	fs.writeFileSync(dst, min, "utf8");
+function ensureDir(directory) {
+	fs.mkdirSync(directory, { recursive: true });
 }
 
-function copyFile(src, dst) {
-	ensureDir(path.dirname(dst));
-	fs.copyFileSync(src, dst);
+function minifyJson(source, destination) {
+	ensureDir(path.dirname(destination));
+	const parsed = JSON.parse(fs.readFileSync(source, "utf8"));
+	fs.writeFileSync(destination, JSON.stringify(parsed), "utf8");
 }
 
-function walk(dir) {
-	for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-		if (["node_modules", ".git", "dist", "build"].includes(entry.name)) continue;
+function copyFile(source, destination) {
+	ensureDir(path.dirname(destination));
+	fs.copyFileSync(source, destination);
+}
 
-		const full = path.join(dir, entry.name);
-		const rel = path.relative(SRC, full);
-		const out = path.join(OUT, rel);
+function walk(directory) {
+	for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+		if (["node_modules", ".git", "dist", "build"].includes(entry.name)) {
+			continue;
+		}
+
+		const source = path.join(directory, entry.name);
+		const relative = path.relative(SRC, source);
+		const destination = path.join(OUT, relative);
 
 		if (entry.isDirectory()) {
-			walk(full);
-		} else if (entry.isFile()) {
-			if (entry.name.toLowerCase().endsWith(".json")) {
-				try {
-					minifyJson(full, out);
-				} catch (e) {
-					console.error(`Invalid JSON skipped: ${rel}`);
-				}
-			} else {
-				copyFile(full, out);
-			}
+			walk(source);
+			continue;
 		}
+		if (!entry.isFile()) {
+			continue;
+		}
+
+		const lowerName = entry.name.toLowerCase();
+		if (lowerName.endsWith(".json") || lowerName.endsWith(".mcmeta")) {
+			try {
+				minifyJson(source, destination);
+			} catch (error) {
+				throw new Error(`Invalid JSON: ${relative}\n${error.message}`);
+			}
+		} else {
+			copyFile(source, destination);
+		}
+	}
+}
+
+function validateArtifactDefinitions() {
+	const root = path.join(SRC, "assets", "siteb", "items", "artifact");
+	const missing = ARTIFACT_IDS.filter(
+		id => !fs.existsSync(path.join(root, `${id}.json`))
+	);
+	if (missing.length > 0) {
+		throw new Error(
+			`Missing dinoCore artifact definitions: ${missing.join(", ")}`
+		);
 	}
 }
 
 function zipFolder() {
-	console.log("Zipping with 7-Zip (max compression)…");
+	const installed7Zip = "C:\\Program Files\\7-Zip\\7z.exe";
+	const executable =
+		process.platform === "win32" && fs.existsSync(installed7Zip)
+			? installed7Zip
+			: "7z";
 
+	console.log("Zipping with 7-Zip (maximum compression)...");
 	const result = spawnSync(
-		"7z",
+		executable,
 		[
-			"a",              // add to archive
-			"-tzip",          // zip format (Minecraft-compatible)
-			"-mx=9",          // maximum compression
-			"-mfb=258",       // max number of fast bytes (better compression)
-			"-mpass=15",      // multiple compression passes
-			ZIP,              // output zip file
-			"."               // archive contents
+			"a",
+			"-tzip",
+			"-mx=9",
+			"-mfb=258",
+			"-mpass=15",
+			ZIP,
+			"."
 		],
-		{
-			cwd: OUT,
-			stdio: "inherit"
-		}
+		{ cwd: OUT, stdio: "inherit" }
 	);
 
 	if (result.error) {
-		throw new Error("7-Zip not found on PATH");
+		throw new Error("7-Zip was not found.");
 	}
 	if (result.status !== 0) {
-		throw new Error("7-Zip compression failed");
+		throw new Error("7-Zip compression failed.");
 	}
 }
 
 function writeSha1(zipPath) {
-	const hash = crypto.createHash("sha1");
-	const data = fs.readFileSync(zipPath);
-	hash.update(data);
-	const sha1 = hash.digest("hex");
-
-	const PROJECT_ROOT = process.cwd();
-	const outFile = path.join(PROJECT_ROOT, "sha1.txt");
-	fs.writeFileSync(outFile, sha1 + "\n", "utf8");
-
+	const sha1 = crypto
+		.createHash("sha1")
+		.update(fs.readFileSync(zipPath))
+		.digest("hex");
+	const output = path.join(process.cwd(), "sha1.txt");
+	fs.writeFileSync(output, sha1 + "\n", "utf8");
 	console.log(`SHA-1: ${sha1}`);
-	console.log(`Written to: ${outFile}`);
+	console.log(`Written to: ${output}`);
 }
 
-ensureDir(OUT);
-walk(SRC);
-zipFolder();
-writeSha1(ZIP);
-
-console.log(`Done.\nOutput folder: ${OUT}\nZip file: ${ZIP}`);
+try {
+	validateArtifactDefinitions();
+	fs.rmSync(OUT, { recursive: true, force: true });
+	fs.rmSync(ZIP, { force: true });
+	ensureDir(OUT);
+	walk(SRC);
+	zipFolder();
+	writeSha1(ZIP);
+	console.log(`Done.\nOutput folder: ${OUT}\nZip file: ${ZIP}`);
+} catch (error) {
+	console.error(error.message);
+	process.exit(1);
+}
