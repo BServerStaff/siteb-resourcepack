@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "dinocore:artifact/tag_voucher"
+    "model": "dinocore:tag_voucher/tag_voucher_gui"
   }
 }

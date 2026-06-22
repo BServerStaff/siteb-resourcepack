@@ -121,3 +121,10 @@ All tag vouchers use:
 ```text
 dinocore:tag_voucher
 ```
+
+Their flat GUI/ground artwork lives at:
+
+```text
+src/assets/dinocore/models/tag_voucher/tag_voucher_gui.json
+src/assets/dinocore/textures/item/tag_voucher/tag_voucher_gui.png
+```
