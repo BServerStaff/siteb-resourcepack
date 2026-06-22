@@ -262,7 +262,7 @@ function validateShopCategoryDefinitions() {
 		"item",
 		"shop",
 		"category",
-		"plushies.png"
+		"plushies"
 	);
 	if (!fs.existsSync(plushiesTexture)) {
 		throw new Error("Missing Plushies shop category texture.");
