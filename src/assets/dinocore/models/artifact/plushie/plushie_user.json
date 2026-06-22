@@ -1,9 +1,0 @@
-{
-  "parent": "dinocore:artifact/plushie/humanoid",
-  "textures": {
-    "left_arm_one": "dinocore:item/artifact/plushie/plushie_user/left_arm_one",
-    "left_arm_two": "dinocore:item/artifact/plushie/plushie_user/left_arm_two",
-    "left_arm_three": "dinocore:item/artifact/plushie/plushie_user/left_arm_three",
-    "skin": "dinocore:item/artifact/plushie/plushie_user/user"
-  }
-}

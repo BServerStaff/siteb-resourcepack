@@ -1,8 +1,0 @@
-{
-  "parent": "dinocore:artifact/plushie/nm_adorable_trophy_bronze",
-  "credit": "Made by Nog's Menagerie",
-  "textures": {
-    "0": "dinocore:item/artifact/plushie/nm_adorable_trophy_gold_texture",
-    "particle": "dinocore:item/artifact/plushie/nm_adorable_trophy_gold_texture"
-  }
-}

@@ -76,8 +76,8 @@ src/assets/dinocore/models/artifact/vote_note/
 src/assets/dinocore/textures/item/artifact/vote_note/
 ```
 
-Vanilla definitions under `assets/minecraft/items` remain useful for global or
-legacy overrides. dinoCore artifacts use namespaced definitions under
+Vanilla definitions under `assets/minecraft/items` remain useful for global
+overrides. dinoCore artifacts use namespaced definitions under
 `assets/dinocore/items/artifact` instead of matching custom names or lore.
 
 ### Plushies
@@ -101,7 +101,7 @@ Plushies with a rarity appear in the shop. The baby dragon and three placement
 trophies have no rarity and are command-only. The SiteB box model is used by
 the separate `dinocore:artifact/random_plushie_box` loot-box artifact.
 
-`plushie_user` and `plushie_dino` inherit the shared
+`user` and `dino` inherit the shared
 `models/artifact/plushie/humanoid.json` geometry. Their child models only map
 texture slots. User keeps animated left-arm textures, while Dino uses its
 own animated left-arm sheets generated from the Dino skin. Both therefore use

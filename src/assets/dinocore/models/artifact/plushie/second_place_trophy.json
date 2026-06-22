@@ -1,0 +1,8 @@
+{
+  "parent": "dinocore:artifact/plushie/third_place_trophy",
+  "credit": "Made by Nog's Menagerie",
+  "textures": {
+    "0": "dinocore:item/artifact/plushie/second_place_trophy",
+    "particle": "dinocore:item/artifact/plushie/second_place_trophy"
+  }
+}

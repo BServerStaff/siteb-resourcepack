@@ -199,26 +199,12 @@ function validateArtifactDefinitions() {
 		"artifact",
 		"plushie"
 	);
-	const specialPlushieIds = {
-		baby_ender_dragon_plushie: "baby_dragon",
-		nm_adorable_trophy_gold: "first_place_trophy",
-		nm_adorable_trophy_silver: "second_place_trophy",
-		nm_adorable_trophy_bronze: "third_place_trophy"
-	};
 	const plushieIds = fs
 		.readdirSync(plushieModelRoot)
 		.filter(name => name.endsWith(".json"))
 		.map(name => name.slice(0, -5))
 		.filter(name => name !== "humanoid")
-		.map(name => {
-			if (specialPlushieIds[name]) {
-				return specialPlushieIds[name];
-			}
-			if (name.startsWith("plushie_")) {
-				return name.slice("plushie_".length);
-			}
-			throw new Error(`Unmapped plushie model: ${name}`);
-		});
+		.map(name => name);
 	if (new Set(plushieIds).size !== plushieIds.length) {
 		throw new Error(
 			"Duplicate plushie IDs were derived from dinoCore model names."
@@ -569,12 +555,6 @@ function writeDinoCoreFallbackDefinitions() {
 		"artifact",
 		"plushie"
 	);
-	const specialPlushieIds = {
-		baby_ender_dragon_plushie: "baby_dragon",
-		nm_adorable_trophy_gold: "first_place_trophy",
-		nm_adorable_trophy_silver: "second_place_trophy",
-		nm_adorable_trophy_bronze: "third_place_trophy"
-	};
 	for (const file of fs.readdirSync(plushieRoot).sort()) {
 		if (!file.endsWith(".json")) {
 			continue;
@@ -583,11 +563,9 @@ function writeDinoCoreFallbackDefinitions() {
 		if (model === "humanoid") {
 			continue;
 		}
-		const id = specialPlushieIds[model]
-			|| model.replace(/^plushie_/, "");
 		addCase(
 			PLUSHIE_MATERIAL,
-			`dinocore:artifact/plushie/${id}`,
+			`dinocore:artifact/plushie/${model}`,
 			`dinocore:artifact/plushie/${model}`
 		);
 	}
