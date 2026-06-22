@@ -4,7 +4,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "dinocore:artifact/plushie/plushie_peter_texture",
-		"particle": "item/plushies/plushie_peter_texture"
+		"particle": "dinocore:artifact/plushie/plushie_peter_texture"
 	},
 	"elements": [
 		{

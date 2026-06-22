@@ -398,6 +398,120 @@ function validateDinoCoreResources() {
 	}
 }
 
+function validateAllCustomReferences() {
+	const missing = [];
+	const visited = new Set();
+	const parseReference = (reference, defaultNamespace) => {
+		const separator = reference.indexOf(":");
+		return separator === -1
+			? ["minecraft", reference]
+			: [
+				reference.slice(0, separator),
+				reference.slice(separator + 1)
+			];
+	};
+	const inspectModel = (reference, defaultNamespace, source) => {
+		const [namespace, name] = parseReference(
+			reference,
+			defaultNamespace
+		);
+		if (namespace === "minecraft") {
+			return;
+		}
+		const file = path.join(
+			SRC,
+			"assets",
+			namespace,
+			"models",
+			name + ".json"
+		);
+		if (!fs.existsSync(file)) {
+			missing.push(`model ${namespace}:${name} referenced by ${source}`);
+			return;
+		}
+		if (visited.has(file)) {
+			return;
+		}
+		visited.add(file);
+		const model = JSON.parse(fs.readFileSync(file, "utf8"));
+		if (typeof model.parent === "string") {
+			inspectModel(model.parent, namespace, `${namespace}:${name}`);
+		}
+		for (const texture of Object.values(model.textures || {})) {
+			if (typeof texture !== "string" || texture.startsWith("#")) {
+				continue;
+			}
+			const [textureNamespace, textureName] = parseReference(
+				texture,
+				namespace
+			);
+			if (textureNamespace === "minecraft") {
+				continue;
+			}
+			const textureFile = path.join(
+				SRC,
+				"assets",
+				textureNamespace,
+				"textures",
+				textureName + ".png"
+			);
+			if (!fs.existsSync(textureFile)) {
+				missing.push(
+					`texture ${textureNamespace}:${textureName} `
+						+ `referenced by ${namespace}:${name}`
+				);
+			}
+		}
+	};
+	const inspectObject = (value, namespace, source) => {
+		if (!value || typeof value !== "object") {
+			return;
+		}
+		if ((value.type === "minecraft:model" || value.type === "model")
+			&& typeof value.model === "string") {
+			inspectModel(value.model, namespace, source);
+		}
+		for (const child of Object.values(value)) {
+			if (Array.isArray(child)) {
+				child.forEach(entry =>
+					inspectObject(entry, namespace, source)
+				);
+			} else if (child && typeof child === "object") {
+				inspectObject(child, namespace, source);
+			}
+		}
+	};
+	const assetsRoot = path.join(SRC, "assets");
+	for (const namespace of fs.readdirSync(assetsRoot)) {
+		const itemsRoot = path.join(assetsRoot, namespace, "items");
+		if (!fs.existsSync(itemsRoot)) {
+			continue;
+		}
+		const inspectDirectory = directory => {
+			for (const entry of fs.readdirSync(directory, {
+				withFileTypes: true
+			})) {
+				const file = path.join(directory, entry.name);
+				if (entry.isDirectory()) {
+					inspectDirectory(file);
+				} else if (entry.name.endsWith(".json")) {
+					inspectObject(
+						JSON.parse(fs.readFileSync(file, "utf8")),
+						namespace,
+						path.relative(SRC, file)
+					);
+				}
+			}
+		};
+		inspectDirectory(itemsRoot);
+	}
+	if (missing.length > 0) {
+		throw new Error(
+			`Broken custom resource references:\n${missing.join("\n")}`
+		);
+	}
+}
+
 function customModelCase(value, model) {
 	return {
 		when: value,
@@ -569,6 +683,7 @@ try {
 	validateArtifactDefinitions();
 	validateShopCategoryDefinitions();
 	validateDinoCoreResources();
+	validateAllCustomReferences();
 	fs.rmSync(OUT, { recursive: true, force: true });
 	fs.rmSync(ZIP, { force: true });
 	ensureDir(OUT);
