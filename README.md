@@ -27,10 +27,10 @@ dinoCore sets each artifact's string custom-model-data component to:
 dinocore:artifact/<artifact_id>
 ```
 
-The build reads the matching SiteB item definition from:
+The build reads the matching dinoCore item definition from:
 
 ```text
-src/assets/siteb/items/artifact/<artifact_id>.json
+src/assets/dinocore/items/artifact/<artifact_id>.json
 ```
 
 It then generates vanilla-material selectors in the built pack. Each selector
@@ -49,37 +49,36 @@ The build generates vanilla item definitions that select the custom route only
 when that value is present, then fall back to the normal vanilla model. This
 means players without the resource pack still see the configured vanilla icon.
 
-GUI-only models live at:
+Shop item definitions and models live at:
 
 ```text
-src/assets/siteb/models/item/gui/shop/category/<category_id>.json
+src/assets/dinocore/items/shop/category/<category_id>.json
+src/assets/dinocore/models/shop/category/<category_id>.json
 ```
 
 The included models use vanilla textures as defaults. To customize an icon,
-add a PNG under `textures/item/gui/shop/category/` and change that model's
-`layer0` to `siteb:item/gui/shop/category/<category_id>`.
+add a PNG under `src/assets/dinocore/textures/shop/category/` and change that
+model's `layer0` to `dinocore:shop/category/<category_id>`.
 
 Recommended custom-art layout:
 
 ```text
-src/assets/siteb/items/artifact/head_bowl.json
-src/assets/siteb/models/item/artifact/head_bowl/head_bowl.json
-src/assets/siteb/models/item/artifact/head_bowl/head_bowl_gui.json
-src/assets/siteb/textures/item/artifact/head_bowl/head_bowl.png
-src/assets/siteb/textures/item/artifact/head_bowl/head_bowl_gui.png
+src/assets/dinocore/items/artifact/head_bowl.json
+src/assets/dinocore/models/artifact/head_bowl.json
+src/assets/dinocore/textures/artifact/head_bowl/
 ```
 
 The Vote Note is the reference implementation:
 
 ```text
-src/assets/siteb/items/artifact/vote_note.json
-src/assets/siteb/models/item/artifact/vote_note/
-src/assets/siteb/textures/item/artifact/vote_note/
+src/assets/dinocore/items/artifact/vote_note.json
+src/assets/dinocore/models/artifact/vote_note/
+src/assets/dinocore/textures/artifact/vote_note/
 ```
 
 Vanilla definitions under `assets/minecraft/items` remain useful for global or
-legacy overrides. dinoCore artifacts should use namespaced definitions under
-`assets/siteb/items/artifact` instead of matching custom names or lore.
+legacy overrides. dinoCore artifacts use namespaced definitions under
+`assets/dinocore/items/artifact` instead of matching custom names or lore.
 
 ### Plushies
 
@@ -89,19 +88,36 @@ Plushies carry:
 dinocore:artifact/plushie/<plushie_id>
 ```
 
-Their definitions are generated at:
+The build derives each plushie's plugin ID from the model filename and routes
+all plushies through the vanilla `popped_chorus_fruit` item selector. Models
+and textures live at:
 
 ```text
-src/assets/siteb/items/artifact/plushie/<plushie_id>.json
-```
-
-The dinoCore repository contains `tools/sync-plushies.js`, which synchronizes
-these definitions and `plushies.yml` from the model files in:
-
-```text
-src/assets/siteb/models/item/decoration/plushies/
+src/assets/dinocore/models/artifact/plushie/
+src/assets/dinocore/textures/artifact/plushie/
 ```
 
 Plushies with a rarity appear in the shop. The baby dragon and three placement
 trophies have no rarity and are command-only. The SiteB box model is used by
 the separate `dinocore:artifact/random_plushie_box` loot-box artifact.
+
+`plushie_user` and `plushie_dino` inherit the shared
+`models/artifact/plushie/humanoid.json` geometry. Their child models only map
+texture slots. User keeps animated left-arm textures, while Dino uses its
+own animated left-arm sheets generated from the Dino skin. Both therefore use
+the same geometry, display transforms, wave timing, and behavior; only their
+textures differ.
+
+### Placeholders and vanilla fallback
+
+Unfinished artifacts, tag vouchers, and shop categories have item-definition
+and model JSON placeholders in the `dinocore` namespace. Their models inherit
+the matching vanilla model, so they remain visually vanilla until custom art
+is added. Empty texture directories are provided beside the authored assets
+as convenient destinations for future PNGs.
+
+All tag vouchers use:
+
+```text
+dinocore:tag_voucher
+```

@@ -50,8 +50,80 @@ const ARTIFACT_MATERIALS = {
 	head_bowl: "bowl",
 	mob_silencer: "wooden_hoe",
 	mob_unsilencer: "stick",
-	siteb_guidebook: "knowledge_book",
+	siteb_guidebook: "written_book",
 	random_plushie_box: "oxidized_copper_chest"
+};
+const TAG_VOUCHER_MATERIAL = "name_tag";
+const PLUSHIE_MATERIAL = "popped_chorus_fruit";
+const VANILLA_ITEM_MODELS = {
+	paper: {
+		type: "minecraft:model",
+		model: "minecraft:item/paper"
+	},
+	feather: {
+		type: "minecraft:model",
+		model: "minecraft:item/feather"
+	},
+	iron_golem_spawn_egg: {
+		type: "minecraft:model",
+		model: "minecraft:item/iron_golem_spawn_egg"
+	},
+	allay_spawn_egg: {
+		type: "minecraft:model",
+		model: "minecraft:item/allay_spawn_egg"
+	},
+	bowl: {
+		type: "minecraft:model",
+		model: "minecraft:item/bowl"
+	},
+	wooden_hoe: {
+		type: "minecraft:model",
+		model: "minecraft:item/wooden_hoe"
+	},
+	stick: {
+		type: "minecraft:model",
+		model: "minecraft:item/stick"
+	},
+	written_book: {
+		type: "minecraft:model",
+		model: "minecraft:item/written_book"
+	},
+	name_tag: {
+		type: "minecraft:model",
+		model: "minecraft:item/name_tag"
+	},
+	popped_chorus_fruit: {
+		type: "minecraft:model",
+		model: "minecraft:item/popped_chorus_fruit"
+	},
+	creeper_banner_pattern: {
+		type: "minecraft:model",
+		model: "minecraft:item/creeper_banner_pattern"
+	},
+	skull_banner_pattern: {
+		type: "minecraft:model",
+		model: "minecraft:item/skull_banner_pattern"
+	},
+	mojang_banner_pattern: {
+		type: "minecraft:model",
+		model: "minecraft:item/mojang_banner_pattern"
+	},
+	sniffer_egg: {
+		type: "minecraft:model",
+		model: "minecraft:item/sniffer_egg"
+	},
+	command_block_minecart: {
+		type: "minecraft:model",
+		model: "minecraft:item/command_block_minecart"
+	},
+	oxidized_copper_chest: {
+		type: "minecraft:special",
+		base: "minecraft:item/oxidized_copper_chest",
+		model: {
+			type: "minecraft:chest",
+			texture: "minecraft:copper_oxidized"
+		}
+	}
 };
 
 if (SRC === OUT || SRC.startsWith(OUT + path.sep)) {
@@ -91,6 +163,9 @@ function walk(directory) {
 		if (!entry.isFile()) {
 			continue;
 		}
+		if (entry.name === ".gitkeep") {
+			continue;
+		}
 
 		const lowerName = entry.name.toLowerCase();
 		if (lowerName.endsWith(".json") || lowerName.endsWith(".mcmeta")) {
@@ -106,7 +181,7 @@ function walk(directory) {
 }
 
 function validateArtifactDefinitions() {
-	const root = path.join(SRC, "assets", "siteb", "items", "artifact");
+	const root = path.join(SRC, "assets", "dinocore", "items", "artifact");
 	const missing = ARTIFACT_IDS.filter(
 		id => !fs.existsSync(path.join(root, `${id}.json`))
 	);
@@ -119,13 +194,11 @@ function validateArtifactDefinitions() {
 	const plushieModelRoot = path.join(
 		SRC,
 		"assets",
-		"siteb",
+		"dinocore",
 		"models",
-		"item",
-		"decoration",
-		"plushies"
+		"artifact",
+		"plushie"
 	);
-	const plushieItemRoot = path.join(root, "plushie");
 	const specialPlushieIds = {
 		baby_ender_dragon_plushie: "baby_dragon",
 		nm_adorable_trophy_gold: "first_place_trophy",
@@ -136,7 +209,7 @@ function validateArtifactDefinitions() {
 		.readdirSync(plushieModelRoot)
 		.filter(name => name.endsWith(".json"))
 		.map(name => name.slice(0, -5))
-		.filter(name => name !== "siteb-box")
+		.filter(name => name !== "humanoid")
 		.map(name => {
 			if (specialPlushieIds[name]) {
 				return specialPlushieIds[name];
@@ -146,13 +219,21 @@ function validateArtifactDefinitions() {
 			}
 			throw new Error(`Unmapped plushie model: ${name}`);
 		});
-	const missingPlushies = plushieIds.filter(
-		id => !fs.existsSync(path.join(plushieItemRoot, `${id}.json`))
-	);
-	if (missingPlushies.length > 0) {
+	if (new Set(plushieIds).size !== plushieIds.length) {
 		throw new Error(
-			`Missing plushie item definitions: ${missingPlushies.join(", ")}`
+			"Duplicate plushie IDs were derived from dinoCore model names."
 		);
+	}
+
+	const voucher = path.join(
+		SRC,
+		"assets",
+		"dinocore",
+		"items",
+		"tag_voucher.json"
+	);
+	if (!fs.existsSync(voucher)) {
+		throw new Error("Missing dinoCore tag voucher item definition.");
 	}
 }
 
@@ -160,10 +241,8 @@ function validateShopCategoryDefinitions() {
 	const modelRoot = path.join(
 		SRC,
 		"assets",
-		"siteb",
-		"models",
-		"item",
-		"gui",
+		"dinocore",
+		"items",
 		"shop",
 		"category"
 	);
@@ -178,16 +257,144 @@ function validateShopCategoryDefinitions() {
 	const plushiesTexture = path.join(
 		SRC,
 		"assets",
-		"siteb",
+		"dinocore",
 		"textures",
-		"item",
-		"gui",
 		"shop",
 		"category",
 		"plushies.png"
 	);
 	if (!fs.existsSync(plushiesTexture)) {
 		throw new Error("Missing Plushies shop category texture.");
+	}
+}
+
+function resourcePath(reference, kind, extension) {
+	const separator = reference.indexOf(":");
+	const namespace = separator === -1
+		? "minecraft"
+		: reference.slice(0, separator);
+	const name = separator === -1
+		? reference
+		: reference.slice(separator + 1);
+	return path.join(
+		SRC,
+		"assets",
+		namespace,
+		kind,
+		name + extension
+	);
+}
+
+function validateDinoCoreResources() {
+	const missing = [];
+	const visitedModels = new Set();
+	const inspectModel = reference => {
+		if (!reference.startsWith("dinocore:")) {
+			return;
+		}
+		const file = resourcePath(reference, "models", ".json");
+		if (!fs.existsSync(file)) {
+			missing.push(`model ${reference}`);
+			return;
+		}
+		if (visitedModels.has(file)) {
+			return;
+		}
+		visitedModels.add(file);
+		const model = JSON.parse(fs.readFileSync(file, "utf8"));
+		if (typeof model.parent === "string") {
+			inspectModel(model.parent);
+		}
+		for (const texture of Object.values(model.textures || {})) {
+			if (typeof texture !== "string"
+				|| texture.startsWith("#")
+				|| !texture.startsWith("dinocore:")) {
+				continue;
+			}
+			const textureFile = resourcePath(
+				texture,
+				"textures",
+				".png"
+			);
+			if (!fs.existsSync(textureFile)) {
+				missing.push(`texture ${texture}`);
+			}
+		}
+	};
+	const inspectItemModel = model => {
+		if (!model || typeof model !== "object") {
+			return;
+		}
+		if (model.type === "minecraft:model"
+			&& typeof model.model === "string") {
+			inspectModel(model.model);
+		}
+		for (const value of Object.values(model)) {
+			if (Array.isArray(value)) {
+				value.forEach(inspectItemModel);
+			} else if (value && typeof value === "object") {
+				inspectItemModel(value);
+			}
+		}
+	};
+	const inspectItemDirectory = directory => {
+		for (const entry of fs.readdirSync(directory, {
+			withFileTypes: true
+		})) {
+			const file = path.join(directory, entry.name);
+			if (entry.isDirectory()) {
+				inspectItemDirectory(file);
+			} else if (entry.name.endsWith(".json")) {
+				const item = JSON.parse(fs.readFileSync(file, "utf8"));
+				inspectItemModel(item.model);
+			}
+		}
+	};
+	inspectItemDirectory(path.join(
+		SRC,
+		"assets",
+		"dinocore",
+		"items",
+		"artifact"
+	));
+	inspectItemModel(JSON.parse(fs.readFileSync(path.join(
+		SRC,
+		"assets",
+		"dinocore",
+		"items",
+		"tag_voucher.json"
+	), "utf8")).model);
+	const plushieModels = path.join(
+		SRC,
+		"assets",
+		"dinocore",
+		"models",
+		"artifact",
+		"plushie"
+	);
+	for (const file of fs.readdirSync(plushieModels).sort()) {
+		if (file.endsWith(".json")) {
+			inspectModel(
+				`dinocore:artifact/plushie/${file.slice(0, -5)}`
+			);
+		}
+	}
+	for (const id of SHOP_CATEGORY_IDS) {
+		const definition = JSON.parse(fs.readFileSync(path.join(
+			SRC,
+			"assets",
+			"dinocore",
+			"items",
+			"shop",
+			"category",
+			`${id}.json`
+		), "utf8"));
+		inspectItemModel(definition.model);
+	}
+	if (missing.length > 0) {
+		throw new Error(
+			`Broken dinoCore resource references:\n${missing.join("\n")}`
+		);
 	}
 }
 
@@ -213,7 +420,7 @@ function writeDinoCoreFallbackDefinitions() {
 	const artifactRoot = path.join(
 		SRC,
 		"assets",
-		"siteb",
+		"dinocore",
 		"items",
 		"artifact"
 	);
@@ -233,39 +440,80 @@ function writeDinoCoreFallbackDefinitions() {
 		);
 	}
 
-	const plushieRoot = path.join(artifactRoot, "plushie");
+	const plushieRoot = path.join(
+		SRC,
+		"assets",
+		"dinocore",
+		"models",
+		"artifact",
+		"plushie"
+	);
+	const specialPlushieIds = {
+		baby_ender_dragon_plushie: "baby_dragon",
+		nm_adorable_trophy_gold: "first_place_trophy",
+		nm_adorable_trophy_silver: "second_place_trophy",
+		nm_adorable_trophy_bronze: "third_place_trophy"
+	};
 	for (const file of fs.readdirSync(plushieRoot).sort()) {
 		if (!file.endsWith(".json")) {
 			continue;
 		}
-		const id = file.slice(0, -5);
+		const model = file.slice(0, -5);
+		if (model === "humanoid") {
+			continue;
+		}
+		const id = specialPlushieIds[model]
+			|| model.replace(/^plushie_/, "");
 		addCase(
-			"paper",
+			PLUSHIE_MATERIAL,
 			`dinocore:artifact/plushie/${id}`,
-			artifactModel(path.join("plushie", file))
+			`dinocore:artifact/plushie/${model}`
 		);
 	}
 
 	for (const [id, material] of Object.entries(SHOP_CATEGORY_MATERIALS)) {
+		const definition = JSON.parse(fs.readFileSync(path.join(
+			SRC,
+			"assets",
+			"dinocore",
+			"items",
+			"shop",
+			"category",
+			`${id}.json`
+		), "utf8"));
 		addCase(
 			material,
 			`dinocore:shop/category/${id}`,
-			`siteb:item/gui/shop/category/${id}`
+			definition.model
 		);
 	}
+	addCase(
+		TAG_VOUCHER_MATERIAL,
+		"dinocore:tag_voucher",
+		JSON.parse(fs.readFileSync(path.join(
+			SRC,
+			"assets",
+			"dinocore",
+			"items",
+			"tag_voucher.json"
+		), "utf8")).model
+	);
 
 	const outputRoot = path.join(OUT, "assets", "minecraft", "items");
 	ensureDir(outputRoot);
 	for (const [material, cases] of casesByMaterial) {
+		const fallback = VANILLA_ITEM_MODELS[material];
+		if (!fallback) {
+			throw new Error(
+				`Missing exact 26.2 vanilla fallback for ${material}.`
+			);
+		}
 		const definition = {
 			model: {
 				type: "minecraft:select",
 				property: "minecraft:custom_model_data",
 				cases,
-				fallback: {
-					type: "minecraft:model",
-					model: `minecraft:item/${material}`
-				}
+				fallback
 			}
 		};
 		fs.writeFileSync(
@@ -320,6 +568,7 @@ function writeSha1(zipPath) {
 try {
 	validateArtifactDefinitions();
 	validateShopCategoryDefinitions();
+	validateDinoCoreResources();
 	fs.rmSync(OUT, { recursive: true, force: true });
 	fs.rmSync(ZIP, { force: true });
 	ensureDir(OUT);

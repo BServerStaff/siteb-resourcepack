@@ -681,14 +681,14 @@
               "when": "Plushie Dino",
               "model": {
                 "type": "minecraft:model",
-                "model": "siteb:item/decoration/plushies/plushie_dino"
+                "model": "dinocore:artifact/plushie/plushie_dino"
               }
             },
             {
               "when": "Plushie User",
               "model": {
                 "type": "minecraft:model",
-                "model": "siteb:item/decoration/plushies/plushie_user"
+                "model": "dinocore:artifact/plushie/plushie_user"
               }
             }
           ],
@@ -3372,7 +3372,7 @@
             "when": "Mystery Box",
             "model": {
               "type": "minecraft:model",
-              "model": "siteb:item/decoration/plushies/siteb-box"
+              "model": "dinocore:artifact/random_plushie_box"
             }
           }
         ],
