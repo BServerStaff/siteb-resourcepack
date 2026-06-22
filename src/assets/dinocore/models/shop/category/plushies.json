@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "dinocore:item/shop/category/plushies"
-  }
+  "parent": "minecraft:item/oxidized_copper_chest"
 }
