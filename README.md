@@ -57,15 +57,15 @@ src/assets/dinocore/models/shop/category/<category_id>.json
 ```
 
 The included models use vanilla textures as defaults. To customize an icon,
-add a PNG under `src/assets/dinocore/textures/shop/category/` and change that
-model's `layer0` to `dinocore:shop/category/<category_id>`.
+add a PNG under `src/assets/dinocore/textures/item/shop/category/` and change
+that model's `layer0` to `dinocore:item/shop/category/<category_id>`.
 
 Recommended custom-art layout:
 
 ```text
 src/assets/dinocore/items/artifact/head_bowl.json
 src/assets/dinocore/models/artifact/head_bowl.json
-src/assets/dinocore/textures/artifact/head_bowl/
+src/assets/dinocore/textures/item/artifact/head_bowl/
 ```
 
 The Vote Note is the reference implementation:
@@ -73,7 +73,7 @@ The Vote Note is the reference implementation:
 ```text
 src/assets/dinocore/items/artifact/vote_note.json
 src/assets/dinocore/models/artifact/vote_note/
-src/assets/dinocore/textures/artifact/vote_note/
+src/assets/dinocore/textures/item/artifact/vote_note/
 ```
 
 Vanilla definitions under `assets/minecraft/items` remain useful for global or
@@ -94,7 +94,7 @@ and textures live at:
 
 ```text
 src/assets/dinocore/models/artifact/plushie/
-src/assets/dinocore/textures/artifact/plushie/
+src/assets/dinocore/textures/item/artifact/plushie/
 ```
 
 Plushies with a rarity appear in the shop. The baby dragon and three placement

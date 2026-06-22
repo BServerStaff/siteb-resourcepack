@@ -1,6 +1,6 @@
 {
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"layer0": "dinocore:artifact/vote_note/vote_note_gui"
-	}
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dinocore:item/artifact/vote_note/vote_note_gui"
+  }
 }

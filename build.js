@@ -259,6 +259,7 @@ function validateShopCategoryDefinitions() {
 		"assets",
 		"dinocore",
 		"textures",
+		"item",
 		"shop",
 		"category",
 		"plushies.png"
@@ -309,6 +310,12 @@ function validateDinoCoreResources() {
 			if (typeof texture !== "string"
 				|| texture.startsWith("#")
 				|| !texture.startsWith("dinocore:")) {
+				continue;
+			}
+			if (!texture.startsWith("dinocore:item/")) {
+				missing.push(
+					`texture ${texture} is outside the item atlas`
+				);
 				continue;
 			}
 			const textureFile = resourcePath(

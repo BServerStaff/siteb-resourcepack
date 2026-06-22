@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "dinocore:shop/category/plushies"
+    "layer0": "dinocore:item/shop/category/plushies"
   }
 }
