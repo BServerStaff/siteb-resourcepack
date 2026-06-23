@@ -116,15 +116,17 @@ the matching vanilla model, so they remain visually vanilla until custom art
 is added. Empty texture directories are provided beside the authored assets
 as convenient destinations for future PNGs.
 
-All tag vouchers use:
+Tag vouchers use one of these string custom-model-data values:
 
 ```text
 dinocore:tag_voucher
+dinocore:pokemon_tag_voucher
+dinocore:legendary_pokemon_tag_voucher
 ```
 
-Their flat GUI/ground artwork lives at:
+Their flat GUI/ground artwork lives under:
 
 ```text
-src/assets/dinocore/models/tag_voucher/tag_voucher_gui.json
-src/assets/dinocore/textures/item/tag_voucher/tag_voucher_gui.png
+src/assets/dinocore/models/tag_voucher/
+src/assets/dinocore/textures/item/tag_voucher/
 ```

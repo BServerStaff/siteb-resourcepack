@@ -54,6 +54,11 @@ const ARTIFACT_MATERIALS = {
 	random_plushie_box: "oxidized_copper_chest"
 };
 const TAG_VOUCHER_MATERIAL = "name_tag";
+const TAG_VOUCHERS = {
+	tag_voucher: "tag_voucher_gui",
+	pokemon_tag_voucher: "tag_voucher_pokemon_gui",
+	legendary_pokemon_tag_voucher: "tag_voucher_pokemon_legendary_gui"
+};
 const PLUSHIE_MATERIAL = "popped_chorus_fruit";
 const VANILLA_ITEM_MODELS = {
 	paper: {
@@ -211,15 +216,19 @@ function validateArtifactDefinitions() {
 		);
 	}
 
-	const voucher = path.join(
-		SRC,
-		"assets",
-		"dinocore",
-		"items",
-		"tag_voucher.json"
-	);
-	if (!fs.existsSync(voucher)) {
-		throw new Error("Missing dinoCore tag voucher item definition.");
+	for (const id of Object.keys(TAG_VOUCHERS)) {
+		const voucher = path.join(
+			SRC,
+			"assets",
+			"dinocore",
+			"items",
+			`${id}.json`
+		);
+		if (!fs.existsSync(voucher)) {
+			throw new Error(
+				`Missing dinoCore ${id} item definition.`
+			);
+		}
 	}
 }
 
@@ -350,13 +359,15 @@ function validateDinoCoreResources() {
 		"items",
 		"artifact"
 	));
-	inspectItemModel(JSON.parse(fs.readFileSync(path.join(
-		SRC,
-		"assets",
-		"dinocore",
-		"items",
-		"tag_voucher.json"
-	), "utf8")).model);
+	for (const id of Object.keys(TAG_VOUCHERS)) {
+		inspectItemModel(JSON.parse(fs.readFileSync(path.join(
+			SRC,
+			"assets",
+			"dinocore",
+			"items",
+			`${id}.json`
+		), "utf8")).model);
+	}
 	const plushieModels = path.join(
 		SRC,
 		"assets",
@@ -586,17 +597,19 @@ function writeDinoCoreFallbackDefinitions() {
 			definition.model
 		);
 	}
-	addCase(
-		TAG_VOUCHER_MATERIAL,
-		"dinocore:tag_voucher",
-		JSON.parse(fs.readFileSync(path.join(
-			SRC,
-			"assets",
-			"dinocore",
-			"items",
-			"tag_voucher.json"
-		), "utf8")).model
-	);
+	for (const id of Object.keys(TAG_VOUCHERS)) {
+		addCase(
+			TAG_VOUCHER_MATERIAL,
+			`dinocore:${id}`,
+			JSON.parse(fs.readFileSync(path.join(
+				SRC,
+				"assets",
+				"dinocore",
+				"items",
+				`${id}.json`
+			), "utf8")).model
+		);
+	}
 
 	const outputRoot = path.join(OUT, "assets", "minecraft", "items");
 	ensureDir(outputRoot);
