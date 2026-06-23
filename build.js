@@ -18,7 +18,7 @@ const ZIP = path.resolve(zipArg);
 const ARTIFACT_IDS = [
 	"vote_note",
 	"two_birds_one_arrow",
-	"big_size",
+	"large_size",
 	"small_size",
 	"head_bowl",
 	"mob_silencer",
@@ -45,7 +45,7 @@ const SHOP_CATEGORY_MATERIALS = {
 const ARTIFACT_MATERIALS = {
 	vote_note: "paper",
 	two_birds_one_arrow: "feather",
-	big_size: "iron_golem_spawn_egg",
+	large_size: "iron_golem_spawn_egg",
 	small_size: "allay_spawn_egg",
 	head_bowl: "bowl",
 	mob_silencer: "wooden_hoe",
