@@ -1,3 +1,6 @@
 {
-  "parent": "minecraft:item/wooden_hoe"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dinocore:item/artifact/mob_silencer/mob_silencer_gui"
+  }
 }
