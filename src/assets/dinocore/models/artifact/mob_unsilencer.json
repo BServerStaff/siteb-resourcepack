@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dinocore:item/artifact/mob_unsilencer/mob_unsilencer_gui"
+  }
+}

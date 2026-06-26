@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dinocore:item/artifact/head_bowl/head_bowl_gui"
+  }
+}

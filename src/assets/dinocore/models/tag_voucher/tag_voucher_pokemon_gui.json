@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dinocore:item/tag_voucher/tag_voucher_pokemon_gui"
+  }
+}

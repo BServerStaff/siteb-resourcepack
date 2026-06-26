@@ -1,8 +1,20 @@
-Resourcepack for the SiteB Minecraft server.
+# SiteB Resource Pack
+(updates for 26.2)
 
-```bash
+Resource pack for the SiteB Minecraft server.
+
+## Build
+
+```text
 node build.js <srcDir> <outDir> <zipName>
 ```
 
-> [!NOTE]
-> This build script requires **7-Zip** to be installed and accessible as `7z` on your system `PATH`.
+Example:
+
+```powershell
+node build.js ".\src" ".\build" "SiteB.zip"
+```
+
+The build validates and minifies JSON, recreates the output directory, creates
+the ZIP, and writes its SHA-1 to `sha1.txt`. On Windows it automatically uses
+`C:\Program Files\7-Zip\7z.exe` when available; otherwise `7z` must be on PATH.

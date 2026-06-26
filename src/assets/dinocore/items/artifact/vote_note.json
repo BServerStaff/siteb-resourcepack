@@ -1,0 +1,22 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:display_context",
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "dinocore:artifact/vote_note/vote_note"
+    },
+    "cases": [
+      {
+        "when": [
+          "gui",
+          "ground"
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "dinocore:artifact/vote_note/vote_note_gui"
+        }
+      }
+    ]
+  }
+}

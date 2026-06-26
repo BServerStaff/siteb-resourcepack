@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dinocore:item/artifact/knockback_stick/knockback_stick_gui"
+  }
+}
