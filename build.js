@@ -24,7 +24,11 @@ const ARTIFACT_IDS = [
 	"mob_silencer",
 	"mob_unsilencer",
 	"siteb_guidebook",
-	"random_plushie_box"
+	"random_plushie_box",
+	"knockback_stick",
+	"drugs",
+	"dino_cookie",
+	"death_potion"
 ];
 const SHOP_CATEGORY_IDS = [
 	"season_2_tags",
@@ -51,7 +55,11 @@ const ARTIFACT_MATERIALS = {
 	mob_silencer: "wooden_hoe",
 	mob_unsilencer: "stick",
 	siteb_guidebook: "written_book",
-	random_plushie_box: "oxidized_copper_chest"
+	random_plushie_box: "oxidized_copper_chest",
+	knockback_stick: "stick",
+	drugs: "sugar",
+	dino_cookie: "cookie",
+	death_potion: "splash_potion"
 };
 const TAG_VOUCHER_MATERIAL = "name_tag";
 const TAG_VOUCHERS = {
@@ -128,6 +136,18 @@ const VANILLA_ITEM_MODELS = {
 			type: "minecraft:chest",
 			texture: "minecraft:copper_oxidized"
 		}
+	},
+	sugar: {
+		type: "minecraft:model",
+		model: "minecraft:item/sugar"
+	},
+	cookie: {
+		type: "minecraft:model",
+		model: "minecraft:item/cookie"
+	},
+	splash_potion: {
+		type: "minecraft:model",
+		model: "minecraft:item/splash_potion"
 	}
 };
 
